@@ -25,6 +25,10 @@ export class ItemGaleriaComponent implements OnInit {
     alert('auxilio me desmayo: '+this.nombreItem);
   }
 
+  alertarBlur(){
+    alert('alertar blur');
+  }
+
 }/*
 @DecoratorsClase()
 class Usuario{

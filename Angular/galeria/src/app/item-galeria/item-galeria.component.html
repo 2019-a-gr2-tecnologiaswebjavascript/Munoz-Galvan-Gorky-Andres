@@ -1,4 +1,7 @@
 <h1 class="rojo">Item galeria - {{title}}</h1>
+<!-- {{}} -> interpolacion-->
 <p>Nombre: {{nombreItem}}</p>
-
-<button (click)="alertar()">{{textoBoton}}</button>
+<!-- Escuchar un evento en angular -->
+<button (blur)="alertarBlur()" (click)="alertar()">
+    {{textoBoton}}
+</button>
