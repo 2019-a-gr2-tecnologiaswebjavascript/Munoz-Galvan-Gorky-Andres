@@ -1,10 +1,24 @@
-<h1 class="rojo">Titulo {{title}}</h1>
-<app-item-galeria 
+<h1 [class]="color">Titulo {{title}}</h1>
+
+<pre>
+    {{_carritoService.carritoCompras | json}}
+</pre>
+
+<button (click)="mostrar(true)">Mostrar</button>
+
+<button (click)="mostrar(false)">Ocultar</button>
+
+<div *ngIf="estaMostrando">
+
+    <app-item-galeria 
     *ngFor= "let flor of arregloFlores"
+    [titulo] ="flor.titulo"
     [nombreItem] = "flor.nombre"
     [textoBoton] = "flor.descripcion"
+    [notas] = "flor.notas"
     (cambioChela)="cambioChela($event)"
     (cambioCerveza)="cambioCerveza($event)"
->
-VAMOS BIELAS 
-</app-item-galeria>
+    >
+    </app-item-galeria>
+
+</div>
