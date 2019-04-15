@@ -13,7 +13,8 @@ export class ItemGaleriaComponent implements OnInit,OnDestroy {
   url = "http://www.dna-autoparts.com/23121-thickbox_default/bielas-forjadas-eagle-para-sr20det.jpg";
   color = 'red';
 
-  notas = [1,2,3,4,5,6,7,8,9,10];
+  @Input()
+  notas;
 
   @Input()
   titulo;
@@ -48,7 +49,7 @@ export class ItemGaleriaComponent implements OnInit,OnDestroy {
     alert('auxilio me desmayo: '+this.nombreItem);
   }
 
-  agregarCarrito(valorCarrito:number){
+  agregarCarrito(valorCarrito){
 
     const itemCarrito = {
       valor:valorCarrito,

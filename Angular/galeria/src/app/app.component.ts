@@ -15,15 +15,27 @@ export class AppComponent {
     {
       titulo:"Don José",
       nombre:"Papitas",
-      descripcion:"A lo bestia"
+      descripcion:"A lo bestia",
+      notas:[
+        'Perro',
+        'Hamburguesa'
+      ]
     },{
       titulo:"Don Pepito",
       nombre:"Carnitas",
-      descripcion:"Gorditas"
+      descripcion:"Gorditas",
+      notas:[
+        'Papitas',
+        'Empanadas'
+      ]
     },{
       titulo:"Doña María",
       nombre:"Chicas",
-      descripcion:"Cheveres"
+      descripcion:"Cheveres",
+      notas:[
+        'Mote',
+        'Fritada'
+      ]
     }
   ];
 
