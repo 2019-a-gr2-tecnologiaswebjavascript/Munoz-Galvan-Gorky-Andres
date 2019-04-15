@@ -1,5 +1,9 @@
 <h1 [class]="color">Titulo {{title}}</h1>
 
+<pre>
+    {{_carritoService.carritoCompras | json}}
+</pre>
+
 <button (click)="mostrar(true)">Mostrar</button>
 
 <button (click)="mostrar(false)">Ocultar</button>
@@ -8,6 +12,7 @@
 
     <app-item-galeria 
     *ngFor= "let flor of arregloFlores"
+    [titulo] ="flor.titulo"
     [nombreItem] = "flor.nombre"
     [textoBoton] = "flor.descripcion"
     (cambioChela)="cambioChela($event)"
