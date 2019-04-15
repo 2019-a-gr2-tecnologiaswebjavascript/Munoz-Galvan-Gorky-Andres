@@ -1,18 +1,10 @@
 <h1 class="rojo">Titulo {{title}}</h1>
-<app-item-galeria
-    nombreItem="Papitas"
-    textoBoton="a lo bestia"
+<app-item-galeria 
+    *ngFor= "let flor of arregloFlores"
+    [nombreItem] = "flor.nombre"
+    [textoBoton] = "flor.descripcion"
+    (cambioChela)="cambioChela($event)"
+    (cambioCerveza)="cambioCerveza($event)"
 >
-</app-item-galeria>
-
-<app-item-galeria
-    nombreItem="Carnitas"
-    textoBoton="gorditas"
->
-</app-item-galeria>
-
-<app-item-galeria
-    nombreItem="Chicas"
-    textoBoton="cheveres"
->
+VAMOS BIELAS 
 </app-item-galeria>

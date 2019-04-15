@@ -1,7 +1,15 @@
 <h1 class="rojo">Item galeria - {{title}}</h1>
 <!-- {{}} -> interpolacion-->
 <p>Nombre: {{nombreItem}}</p>
-<!-- Escuchar un evento en angular -->
-<button (blur)="alertarBlur()" (click)="alertar()">
+<!-- Escuchar un evento en angular Event binding-->
+<button (click)="alertar()">
     {{textoBoton}}
 </button>
+<!--[] Property binding -> Propiedades o atributos -->
+<img [src]="url" alt="" 
+(click)="cambiarImagen()">
+
+<!-- Directiva -> *ngFor -->
+<p *ngFor="let nota of notas">
+    {{nota}}
+</p>
