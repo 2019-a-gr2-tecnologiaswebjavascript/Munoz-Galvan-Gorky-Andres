@@ -9,7 +9,7 @@ export class ItemGaleriaComponent implements OnInit {
 
   title = 'floreria';
   url = "http://www.dna-autoparts.com/23121-thickbox_default/bielas-forjadas-eagle-para-sr20det.jpg";
-
+  color = 'red';
 
   notas = [1,2,3,4,5,6,7,8,9,10];
 
@@ -50,9 +50,11 @@ export class ItemGaleriaComponent implements OnInit {
     if(this.url === cerveza){
       this.url = chelas;
       this.cambioChela.emit(true);
+      this.color = "verde"
     }else{
       this.url = cerveza;
       this.cambioCerveza.emit(true);
+      this.color = "amarillo"
     }
     //No se debe usar var para definir variables
     //var url2 = "https://s.libertaddigital.com/2019/01/02/cerveza-fresca.jpg";
