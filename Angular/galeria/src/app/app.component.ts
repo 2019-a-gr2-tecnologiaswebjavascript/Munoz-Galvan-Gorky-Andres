@@ -18,7 +18,8 @@ export class AppComponent {
       descripcion:"A lo bestia",
       notas:[
         'Perro',
-        'Hamburguesa'
+        'Hamburguesa',
+        'Papitas'
       ]
     },{
       titulo:"Don Pepito",
@@ -34,7 +35,8 @@ export class AppComponent {
       descripcion:"Cheveres",
       notas:[
         'Mote',
-        'Fritada'
+        'Fritada',
+        'Papitas'
       ]
     }
   ];
