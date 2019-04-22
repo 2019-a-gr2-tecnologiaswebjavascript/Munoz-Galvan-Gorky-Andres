@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { CarritoService } from '../servicios/carrito/carrito.service';
+import {ItemCarritoCompras} from '../interfaces/item-carrito-compras'
 
 @Component({
   selector: 'app-item-galeria',
@@ -49,16 +50,16 @@ export class ItemGaleriaComponent implements OnInit,OnDestroy {
     alert('auxilio me desmayo: '+this.nombreItem);
   }
 
-  agregarCarrito(valorCarrito){
+  agregarCarrito(valorCarrito:string){
 
-    const itemCarrito = {
+    const itemCarrito:ItemCarritoCompras = {
       valor:valorCarrito,
-      nombreTienda: this.titulo
+      nombreTienda: this.titulo,
+      fechaCompra: new Date()
     };
-
-    this._carritoService.carritoCompras
-                      .splice(0,0,itemCarrito);
-    console.log(this._carritoService.carritoCompras);
+    const respuestaCarrito = this._carritoService
+        .agregarCarritoDeCompras(itemCarrito);
+    console.log(respuestaCarrito);
   }
 
   cambiarImagen(){
@@ -80,7 +81,14 @@ export class ItemGaleriaComponent implements OnInit,OnDestroy {
     //let url3 ="https://www.telediariodigital.net/wp-content/uploads/2016/01/cerveza-belga.jpg";
   }
 
-}/*
+}
+
+class CarritoComprasClass implements ItemCarritoCompras{
+  valor:string;
+  nombreTienda:string;
+  //fechaCompra?:Date;
+}
+/*
 @DecoratorsClase()
 class Usuario{
   @DecoratorsVariable()
@@ -95,3 +103,22 @@ class Usuario{
   protected metodoProtected(){}
 
 }*/
+
+/*
+Problema: 
+  Cuando agregue un item al arreglo, debo guardar su cantidad.
+  En el item nos hace falta, la cantidad
+
+  id -> Valor
+
+  1) Verificar si ya existe el item -> valor
+    1.1 Existe)
+      Aumentar el contador
+    1.2 No existe)
+      Creamos el contador y lo seteamos en 1
+
+
+
+
+
+*/
