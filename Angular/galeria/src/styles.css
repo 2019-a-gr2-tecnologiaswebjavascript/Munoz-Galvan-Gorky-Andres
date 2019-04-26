@@ -2,3 +2,14 @@
 .rojo{
     color:red;
 }
+
+.contenedor{
+    padding: 40px;
+    margin: 40px;
+    border: 20px black solid;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
