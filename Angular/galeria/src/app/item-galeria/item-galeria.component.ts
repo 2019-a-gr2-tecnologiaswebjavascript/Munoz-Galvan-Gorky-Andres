@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { CarritoService } from '../servicios/carrito/carrito.service';
-import {ItemCarritoCompras} from '../interfaces/item-carrito-compras'
+import {ItemCarritoCompras,ItemTienda} from '../interfaces/item-carrito-compras'
 
 @Component({
   selector: 'app-item-galeria',
@@ -39,7 +39,7 @@ export class ItemGaleriaComponent implements OnInit,OnDestroy {
 
   ngOnInit() {
     console.log('Empezo');
-    console.log(this._carritoService.carritoCompras);
+    console.log(this._carritoService.carritoComprasTienda);
   }
 
   ngOnDestroy(){
@@ -52,13 +52,14 @@ export class ItemGaleriaComponent implements OnInit,OnDestroy {
 
   agregarCarrito(valorCarrito:string){
 
-    const itemCarrito:ItemCarritoCompras = {
+    const itemObjeto:ItemCarritoCompras = {
       valor:valorCarrito,
-      nombreTienda: this.titulo,
+      //nombreTienda:this.titulo,
       fechaCompra: new Date()
     };
+
     const respuestaCarrito = this._carritoService
-        .agregarCarritoDeCompras(itemCarrito);
+        .agregarProductoTienda(itemObjeto,this.titulo);
     console.log(respuestaCarrito);
   }
 
