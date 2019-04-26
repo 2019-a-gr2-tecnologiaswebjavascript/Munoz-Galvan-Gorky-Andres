@@ -1,29 +1,104 @@
 import { Injectable } from '@angular/core';
-import { ItemCarritoCompras } from '../../interfaces/item-carrito-compras';
+import { ItemCarritoCompras,ItemTienda } from '../../interfaces/item-carrito-compras';
+import { asTextData } from '@angular/core/src/view';
 
 @Injectable() //Decorador para servicios
 export class CarritoService{
 
-    carritoCompras:ItemCarritoCompras[] = [];
+    carritoComprasTienda:ItemTienda[] = [];
 
-    agregarCarritoDeCompras(
-        itemCarrito:ItemCarritoCompras
-        ):ItemCarritoCompras[]{
-
-            const identificador = itemCarrito.valor;
-            let indiceItem = -1;
-            const existeElItem = this.carritoCompras
+    agregarProductoTienda(itemCarrito:ItemCarritoCompras,
+        nombreTienda:string
+        ):ItemTienda[]{
+            //const nombreTienda = itemCarrito.nombreTienda;
+            const nombreProducto = itemCarrito.valor;
+            let indiceTienda = -1;
+            let indiceProducto = -1;
+            const existeTienda = this.carritoComprasTienda
+            .some(
+                (itmTienda:ItemTienda,indice)=>{
+                    if(itmTienda.nombreTienda == nombreTienda){
+                        indiceTienda = indice;
+                        return true;
+                    }else{
+                        return false;
+                    }
+                    
+                }
+            )
+            if(existeTienda){
+                const existeProducto = this.carritoComprasTienda[indiceTienda].itemCarrito
                 .some(
-                    (item:ItemCarritoCompras,indice)=>{
-                        if(item.valor == identificador){
-                            indiceItem = indice;
+                    (itemProducto:ItemCarritoCompras,indice)=>{
+                        if(itemProducto.valor == nombreProducto){
+                            indiceProducto = indice;
                             return true;
                         }else{
                             return false;
                         }
+                        
                     }
                 )
-            if(existeElItem){
+                if(existeProducto){
+                    this.anadirAlContador(indiceTienda,indiceProducto);
+                }else{
+                    this.anadirAlCarrito(indiceTienda,itemCarrito);
+                }
+            }else{
+                this.anadirTienda(itemCarrito,nombreTienda);
+            }
+
+            console.log('Se anadio al carrito',itemCarrito);
+            return this.carritoComprasTienda;
+      }
+  
+    private anadirTienda(item:ItemCarritoCompras,nombreTienda:string)
+    {
+        const producto:ItemCarritoCompras = {
+            valor: item.valor,
+            fechaCompra: new Date(),
+            cantidad:1
+        }
+        const prueba:ItemTienda = {
+            nombreTienda: nombreTienda,
+            itemCarrito:[]
+        };  
+        prueba.itemCarrito.splice(0,0,producto);
+        this.carritoComprasTienda.splice(0,0,prueba);
+    }
+    private anadirAlContador(indiceTienda:number,indice:number){
+        this.carritoComprasTienda[indiceTienda].itemCarrito[indice].cantidad++;
+    }
+
+    private anadirAlCarrito(indiceTienda:number,item:ItemCarritoCompras){
+        item.cantidad = 1;
+        this.carritoComprasTienda[indiceTienda].itemCarrito.splice(0,0,item);
+    }
+
+}
+
+/*  agregarCarritoDeCompras(
+        itemCarrito:ItemCarritoCompras
+        ):ItemCarritoCompras[]{
+
+            const nombreObjeto = itemCarrito.valor;
+            let indiceItem = -1;
+
+            const existeElItemTienda = this.carritoCompras
+                .some(
+                    (item:ItemCarritoCompras,indice)=>{
+                        if(item.valor == nombreObjeto){
+                            indiceItem = indice;
+                            return true;
+                        }
+                        else{
+
+                            return false;
+                        }
+                    }
+                )
+
+            if(existeElItemTienda){
                 this.anadirAlContador(indiceItem);
             }else{
                 this.anadirAlCarrito(itemCarrito);
@@ -32,18 +107,6 @@ export class CarritoService{
             return this.carritoCompras;
 
     }
-
-    private anadirAlContador(indice:number){
-        this.carritoCompras[indice].cantidad++;
-    }
-
-    private anadirAlCarrito(item:ItemCarritoCompras){
-        item.cantidad = 1;
-        this.carritoCompras.splice(0,0,item);
-    }
-
-}
-/*
 const respuesta = [1,2,3,4].forEach( //undefined -> void
     (valor:number)=>{
             console.log('Valor',valor);
