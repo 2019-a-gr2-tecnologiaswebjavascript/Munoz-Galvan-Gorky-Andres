@@ -4,6 +4,7 @@ import { RutaHomeComponent } from './rutas/ruta-home/ruta-home.component';
 import { RutaCreditosComponent } from './rutas/ruta-creditos/ruta-creditos.component';
 import { RutaProductosComponent } from './rutas/ruta-productos/ruta-productos.component';
 import { RutaNoEncontradaComponent } from './rutas/ruta-no-encontrada/ruta-no-encontrada.component';
+import { EstaLogeadoService } from './servicios/guards/esta-logeado.service';
 
 const routes: Routes = [
   {
@@ -12,7 +13,10 @@ const routes: Routes = [
   },
   {
     path:'creditos/:idCredito/:tasaReferencia',
-    component: RutaCreditosComponent
+    component: RutaCreditosComponent,
+    canActivate: [
+      EstaLogeadoService
+    ]
   },
   {
     path:'productos',
