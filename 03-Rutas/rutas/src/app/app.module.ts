@@ -7,6 +7,8 @@ import { RutaHomeComponent } from './rutas/ruta-home/ruta-home.component';
 import { RutaCreditosComponent } from './rutas/ruta-creditos/ruta-creditos.component';
 import { RutaProductosComponent } from './rutas/ruta-productos/ruta-productos.component';
 import { RutaNoEncontradaComponent } from './rutas/ruta-no-encontrada/ruta-no-encontrada.component';
+import { EstaLogeadoService } from './servicios/guards/esta-logeado.service';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { RutaNoEncontradaComponent } from './rutas/ruta-no-encontrada/ruta-no-en
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    EstaLogeadoService,
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

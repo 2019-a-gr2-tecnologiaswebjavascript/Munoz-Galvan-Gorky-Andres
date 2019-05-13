@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-ruta-home',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RutaHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly _authService: AuthService) { }
+
+
 
   ngOnInit() {
+  }
+
+  login(){
+    console.log('Estamos logeando');
+    this._authService.login('1234','gorky');
+  }
+
+  logout(){
+    console.log('Saliendo del sistemas');
+    this._authService.logout();
   }
 
 }
