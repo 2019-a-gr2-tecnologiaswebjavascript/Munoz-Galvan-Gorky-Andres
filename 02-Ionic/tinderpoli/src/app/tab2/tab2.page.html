@@ -1,9 +1,38 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+          <div id="titulo">
+              Buscar
+            </div>
+      </ion-col>
+      <ion-col>
+          <ion-item id="buscador">
+              <ion-input placeholder="Artistas, canciones o podcasts"></ion-input>
+              <ion-icon name="search" slot="start"></ion-icon>  
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let pos of arregloMasEscuchados">
+      <ion-col size="12">
+          <div>{{pos.nombreTitulo}}</div>
+      </ion-col>
+      <ion-col size="6" *ngFor="let post of pos.arreglo">
+          <div id="cardsBusqueda" [style.backgroundColor]="post.color">
+        <ion-row>
+              <ion-col size="8">
+                  <div>{{post.nombre}}</div>
+              </ion-col>
+              <ion-col size="4">
+                  <img src="{{post.imagen}}">
+              </ion-col>
+        </ion-row>
+      </div>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
