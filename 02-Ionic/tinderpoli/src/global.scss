@@ -9,3 +9,12 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+
+.center{
+    text-align: center;
+}
+
+*{
+    --ion-background-color: black;
+}

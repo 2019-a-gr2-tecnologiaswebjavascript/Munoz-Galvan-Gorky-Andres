@@ -1,9 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab Three
+    <ion-title id="titulo">
+      {{title}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+    <ion-row *ngFor= "let opcion of arregloOpciones">
+      <div class="opcion">
+          <ion-col size="1">
+              <ion-icon name={{opcion.icono}}></ion-icon>  
+            </ion-col>
+          <ion-col size="11"> 
+              {{opcion.nombre}}
+            </ion-col>
+      </div>
+    </ion-row>
+    <ion-row>
+        <ion-col class="center">
+            Escuchado recientemente
+          </ion-col>
+    </ion-row>
+  
+    <app-recientes 
+    *ngFor= "let opcion of arregloEscuchadoRecientemente"
+      [recienteNombre] = "opcion.nombre"
+      [recienteImagen] = "opcion.imagen"
+      [recienteArtista] = "opcion.artistas"
+    ></app-recientes>
 
-<ion-content></ion-content>
+</ion-content>

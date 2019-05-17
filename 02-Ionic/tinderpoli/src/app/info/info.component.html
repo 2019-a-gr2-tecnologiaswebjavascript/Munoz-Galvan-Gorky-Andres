@@ -1,0 +1,12 @@
+<div *ngFor="let post of arregloEscuchadoRecientemente">
+    <div class="center">{{post.titulo}}</div>
+    <div class="descripcion">{{post.descripcion}}</div>
+    <div class="scrolling-wrapper">
+      <div class="card" *ngFor="let pos of post.arregloDatos">
+          <img src="{{pos.imagen}}">
+          <div>{{pos.nombre}}</div>
+          <div>{{pos.artistas}}</div>
+      </div>
+    </div>
+
+</div>

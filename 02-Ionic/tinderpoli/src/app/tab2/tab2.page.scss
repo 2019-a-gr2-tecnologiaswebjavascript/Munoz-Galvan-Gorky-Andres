@@ -1,1 +1,26 @@
+#titulo{
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 30px;
+    font-size: 40px;
+}
+
+#buscador{
+    background-color: blue;
+}
+#cardsBusqueda{
+    min-height: 80px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#cardsBusqueda img{
+    float: right;
+    height: 70px;
+    width: 100%;
+    transform: rotate(20deg);
+}
+
+
+
 
