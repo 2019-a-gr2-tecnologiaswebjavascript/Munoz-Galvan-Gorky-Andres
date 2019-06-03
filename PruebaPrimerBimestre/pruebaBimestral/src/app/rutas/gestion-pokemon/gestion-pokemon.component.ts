@@ -19,7 +19,6 @@ export class GestionPokemonComponent implements OnInit {
 
   constructor(private readonly _activatedRoute:ActivatedRoute,private readonly _nombreCajeroService:NombreCajeroService) { 
     this.entrenadorId=Number(this._activatedRoute.snapshot.params.entrenadorId);
-    console.log(this._nombreCajeroService.nombreCajero);
     this.cargarPokemonesEntrenadorID()
   }
 
@@ -32,11 +31,16 @@ export class GestionPokemonComponent implements OnInit {
     this.nuevoPokemon.id = this._nombreCajeroService.idPokemon;
     this._nombreCajeroService.bddPokemones.push(this.nuevoPokemon);
     this._nombreCajeroService.idPokemon++;
-    console.log(this._nombreCajeroService.bddPokemones);
+    this.nuevoPokemon={} as any;
+    this.cargarPokemonesEntrenadorID();
+    //console.log(this._nombreCajeroService.bddPokemones);
   }
 
-  eliminarPokemon(index:number){
-    this._nombreCajeroService.bddPokemones.splice(index,1);
+  eliminarPokemon(id:number){
+    let pokemonEliminar = this._nombreCajeroService.bddPokemones.findIndex((pokemon)=>{return pokemon.id==id})
+    console.log(pokemonEliminar)
+    this._nombreCajeroService.bddPokemones.splice(pokemonEliminar,1);
+    this.cargarPokemonesEntrenadorID();
     console.log(this.pokemones);
   }
 
@@ -48,7 +52,8 @@ export class GestionPokemonComponent implements OnInit {
   }
 
   cargarPokemonesEntrenadorID(){
-    this.pokemones = this._nombreCajeroService.bddPokemones.filter((pokemon)=>{pokemon.entrenadorId===this.entrenadorId});
+    this.pokemones = this._nombreCajeroService.bddPokemones.filter((pokemon)=>{return pokemon.entrenadorId==this.entrenadorId});
+    console.log(this.pokemones);
   }
 
 }

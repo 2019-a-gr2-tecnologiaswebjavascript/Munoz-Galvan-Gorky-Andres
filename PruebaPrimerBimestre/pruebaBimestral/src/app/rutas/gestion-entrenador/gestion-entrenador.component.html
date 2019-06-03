@@ -33,7 +33,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor='let entrenador of entrenadores; let i = index'>
+            <tr *ngFor='let entrenador of _nombreCajeroService.bddEntrenadores; let i = index'>
               <td>{{entrenador.id}}</td>
               <td>{{entrenador.nombre}}</td>
               <td>{{entrenador.apellido}}</td>
@@ -41,8 +41,8 @@
               <td>{{entrenador.numeroMedallas}}</td>
               <td>{{entrenador.campeonActual}}</td>
               <td>
-                <button class="btn btn-primary" (click)="eliminarEntrenador(id)">Eliminar</button>
-                <button class="btn btn-primary" [routerLink]="['/gestionar-pokemon',id]">Prod</button>
+                <button class="btn btn-primary" (click)="eliminarEntrenador(i)">Eliminar</button>
+                <button class="btn btn-primary" [routerLink]="['/gestionar-pokemon',entrenador.id]">Prod</button>
               </td>
             </tr>
           </tbody>
