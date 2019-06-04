@@ -34,8 +34,14 @@ export class ComprarComponent implements OnInit {
     }
   }
 
-  eliminarProductoDeFactura(){
-    this.productoSeleccionado.slice()
+  eliminarProductoDeFactura(pokemon:Pokemon){
+    const indice = this.productoSeleccionado.findIndex((producto)=>{return producto.id == pokemon.id})
+    const cantidad = this.productoSeleccionado[indice].cantidad
+    if(cantidad>1){
+      this.productoSeleccionado[indice].cantidad--;
+    }else{
+      this.productoSeleccionado.splice(indice,1);
+    }
   }
 
 }
