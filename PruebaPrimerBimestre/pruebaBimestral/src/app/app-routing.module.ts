@@ -6,20 +6,32 @@ import { ReavisarComprasComponent } from './rutas/reavisar-compras/reavisar-comp
 import { GestionEntrenadorComponent } from './rutas/gestion-entrenador/gestion-entrenador.component';
 import { GestionPokemonComponent } from './rutas/gestion-pokemon/gestion-pokemon.component';
 import { ComprarComponent } from './rutas/comprar/comprar.component';
+import {EstaLogeadoService} from './servicios/esta-logeado/esta-logeado.service'
 
 const routes: Routes = [
   {
     path:'login',component:LoginComponent
   },{
-    path:'menu-principal',component:MenuPrincipalComponent,
+    path:'menu-principal',
+    component:MenuPrincipalComponent,
+    canActivate:[EstaLogeadoService]
+  },
+  {
+    path:'gestionar-entrenador',
+    component:GestionEntrenadorComponent,
+    canActivate:[EstaLogeadoService]
   },{
-  path:'gestionar-entrenador',component:GestionEntrenadorComponent
+    path:'gestionar-pokemon/:entrenadorId',
+    component:GestionPokemonComponent,
+    canActivate:[EstaLogeadoService]
   },{
-    path:'gestionar-pokemon/:entrenadorId',component:GestionPokemonComponent
+    path:'revisar-compra',
+    component:ReavisarComprasComponent,
+    canActivate:[EstaLogeadoService]
   },{
-    path:'revisar-compra',component:ReavisarComprasComponent
-  },{
-    path:'comprar',component:ComprarComponent
+    path:'comprar',
+    component:ComprarComponent,
+    canActivate:[EstaLogeadoService]
   },{
     path:'',redirectTo:'login',pathMatch:'full'
   },{

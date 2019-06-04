@@ -9,6 +9,7 @@ import { GestionEntrenadorComponent } from './rutas/gestion-entrenador/gestion-e
 import { GestionPokemonComponent } from './rutas/gestion-pokemon/gestion-pokemon.component';
 import { ComprarComponent } from './rutas/comprar/comprar.component';
 import { ReavisarComprasComponent } from './rutas/reavisar-compras/reavisar-compras.component';
+import { AuthService } from './servicios/auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { ReavisarComprasComponent } from './rutas/reavisar-compras/reavisar-comp
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
