@@ -32,6 +32,7 @@ export class ComprarComponent implements OnInit {
       this.productoAIngresar.cantidad = 1;
       this.productoSeleccionado.push(this.productoAIngresar);
     }
+    this.precioTotal++;
   }
 
   eliminarProductoDeFactura(pokemon:Pokemon){
@@ -42,6 +43,15 @@ export class ComprarComponent implements OnInit {
     }else{
       this.productoSeleccionado.splice(indice,1);
     }
+    this.precioTotal--;
+  }
+
+  guardarFactura(){
+    this.nuevaFactura.id = this._nombreCajeroService.idFactura;
+    this.nuevaFactura.totalCompra = this.precioTotal;
+    this.nuevaFactura.nombreCajero = this._nombreCajeroService.nombreCajero;
+    this._nombreCajeroService.bddFacturas.push(this.nuevaFactura);
+    console.log(this._nombreCajeroService.bddFacturas)
   }
 
 }

@@ -1,3 +1,55 @@
-<p>
-  reavisar-compras works!
-</p>
+<div class="container">
+    <div class="card">
+      <div class="card-header">Revisar facturas</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-4">
+            <label for="nombreFactura">Buscar</label>
+          </div>
+          <div class="col-sm-4">
+              <input type="text" name="nombreEntrenador" id="nombreFactura" [(ngModel)]="buscarFactura">
+          </div>
+          <div class="col-sm-4">
+              <div class="btn-group">
+                  <button class="btn btn-primary" (click)="buscarFacturaPorNombre()">Por nombre</button>
+                  <button class="btn btn-primary" (click)="buscarFacturaPorNombreCajero()">Por nombre cajero</button>
+              </div>
+          </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Cédula</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Correo Electrónico</th>
+                <th>Total compra</th>
+                <th>Nombre cajero</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor='let factura of facturasLocales'>
+                <td>{{factura.id}}</td>
+                <td>{{factura.nombre}}</td>
+                <td>{{factura.cedula}}</td>
+                <td>{{factura.direccion}}</td>
+                <td>{{factura.telefono}}</td>
+                <td>{{factura.correoElectronico}}</td>
+                <td>{{factura.totalCompra}}</td>
+                <td>{{factura.nombreCajero}}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <button class="btn btn-primary" [routerLink]="['/menu-principal']">Regresar</button>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+  </div>
+  

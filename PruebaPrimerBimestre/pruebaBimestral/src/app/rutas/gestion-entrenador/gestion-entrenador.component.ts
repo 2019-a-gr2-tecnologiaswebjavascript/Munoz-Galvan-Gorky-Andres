@@ -10,7 +10,11 @@ import { NombreCajeroService } from 'src/app/servicios/nombre-cajero/nombre-caje
 export class GestionEntrenadorComponent implements OnInit {
 
   nuevoEntrenador:Entrenador= {} as any; 
-  constructor(private readonly _nombreCajeroService:NombreCajeroService) { }
+  entrenadoresLocales:Entrenador[]=[];
+  nombreEntrenadorBuscar="";
+  constructor(private readonly _nombreCajeroService:NombreCajeroService) {
+    this.actualizarEntrenadoresLocales();
+   }
 
   ngOnInit() {
   }
@@ -21,11 +25,25 @@ export class GestionEntrenadorComponent implements OnInit {
     this._nombreCajeroService.bddEntrenadores.push(this.nuevoEntrenador);
     this._nombreCajeroService.idEntrenador++;
     this.nuevoEntrenador={} as any;
+    this.actualizarEntrenadoresLocales();
   }
 
   eliminarEntrenador(index:number){
     this._nombreCajeroService.bddEntrenadores.splice(index,1);
     console.log(this._nombreCajeroService.bddEntrenadores);
+    this.actualizarEntrenadoresLocales();
+  }
+
+  actualizarEntrenadoresLocales(){
+    this.entrenadoresLocales = this._nombreCajeroService.bddEntrenadores;
+  }
+
+  buscarEntrenadorPorNombre(){
+    this.entrenadoresLocales = this._nombreCajeroService.bddEntrenadores
+    .filter(
+      (entrenador)=>{
+        return entrenador.nombre.toUpperCase().includes(this.nombreEntrenadorBuscar.toUpperCase());
+      });
   }
 
 }
