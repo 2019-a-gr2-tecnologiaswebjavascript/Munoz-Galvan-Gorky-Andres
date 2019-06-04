@@ -11,11 +11,14 @@ export class NombreCajeroService {
 
   bddPokemones:Array<any>;
   bddEntrenadores:Array<any>;
+  bddFacturas:Array<any>;
   idPokemon = 1;
   idEntrenador = 1;
+  idFactura = 1;
 
   constructor() { 
     this.bddEntrenadores = new Array<any>();
     this.bddPokemones = new Array<any>();
+    this.bddFacturas = new Array<any>();
   }
 }

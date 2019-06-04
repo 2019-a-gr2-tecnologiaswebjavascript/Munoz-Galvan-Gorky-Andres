@@ -6,5 +6,6 @@ export interface Pokemon{
     poderEspecialDos: string,
     fechaCaptura: Date,
     nivel:number,
-    entrenadorId:number
+    entrenadorId:number,
+    cantidad?:number
 }
