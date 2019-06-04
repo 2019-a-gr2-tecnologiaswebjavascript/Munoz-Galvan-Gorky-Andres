@@ -44,11 +44,13 @@ export class GestionPokemonComponent implements OnInit {
     console.log(this.pokemones);
   }
 
-  buscarPokemonPorNombre():Pokemon[]{
-    console.log(this.nombrePokemonBuscar);
-    return this.pokemones.filter(
-      (pokemon)=>{return pokemon.nombrePokemon.toUpperCase().includes(this.nombrePokemonBuscar.toUpperCase())
-      });
+  buscarPokemonPorNombre(){
+    this.pokemones = this._nombreCajeroService.bddPokemones.filter((pokemon)=>{
+      return (
+        pokemon.entrenadorId==this.entrenadorId && 
+        pokemon.nombrePokemon.toUpperCase().includes(this.nombrePokemonBuscar.toUpperCase())
+          )
+    });
   }
 
   cargarPokemonesEntrenadorID(){
