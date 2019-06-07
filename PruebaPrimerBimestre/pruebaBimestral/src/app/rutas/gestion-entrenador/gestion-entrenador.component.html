@@ -1,0 +1,123 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">Gestión de entrenadores</div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-4">
+          <label for="nombreEntrenador">Buscar</label>
+        </div>
+        <div class="col-sm-4">
+            <input type="text" name="nombreEntrenador" id="nombreEntrenador" [(ngModel)]="nombreEntrenadorBuscar">
+        </div>
+        <div class="col-sm-4">
+          <button class='btn btn-primary' (click)="buscarEntrenadorPorNombre()">Buscar</button>
+        </div>
+        <div class="col-sm-4">
+          </div>
+          <div class="col-sm-4">
+          </div>
+          <div class="col-sm-4">
+            <button class='btn btn-primary' data-toggle="modal" data-target="#modalCrearEntrenador">Crear</button>
+          </div>
+      </div>
+      <table class="table table-striped">
+          <thead>
+            <tr>
+                <th>Id</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Fecha Nacimiento</th>
+              <th>Número de medallas</th>
+              <th>Campeón actual</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let entrenador of entrenadoresLocales; let i = index'>
+              <td>{{entrenador.id}}</td>
+              <td>{{entrenador.nombre}}</td>
+              <td>{{entrenador.apellido}}</td>
+              <td>{{entrenador.fechaNacimiento}}</td>
+              <td>{{entrenador.numeroMedallas}}</td>
+              <td>{{entrenador.campeonActual}}</td>
+              <td>
+                <button class="btn btn-primary" (click)="eliminarEntrenador(i)">Eliminar</button>
+                <button class="btn btn-primary" [routerLink]="['/gestionar-pokemon',entrenador.id]">Prod</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
+
+            
+  <!-- The Modal -->
+  <div class="modal" id="modalCrearEntrenador">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Crear un nuevo entrenador</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="nombreEntrenador">Nombre:</label>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" name="nombre" id="nombreEntrenador" [(ngModel)]="nuevoEntrenador.nombre">
+              </div>
+
+              <div class="col-sm-6">
+                  <label for="apelidoEntrenador">Apellido:</label>
+                </div>
+                <div class="col-sm-6">
+                  <input type="text" name="apellido" id="apelidoEntrenador" [(ngModel)]="nuevoEntrenador.apellido">
+                </div>
+                <div class="col-sm-6">
+                    <label for="fechaNacimientoEntrenador">Fecha de nacimiento:</label>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="date" name="fechaNacimiento" id="fechaNacimientoEntrenador" [(ngModel)]="nuevoEntrenador.fechaNacimiento">
+                  </div>
+                  <div class="col-sm-6">
+                      <label for="numeroMedallasEntrenador">Número de medallas:</label>
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="number" name="numeroMedallas" id="numeroMedallasEntrenador" [(ngModel)]="nuevoEntrenador.numeroMedallas">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="campeonActualEntrenador">Campeón actual:</label>
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="checkbox" name="campeonActual" id="campeonActualEntrenador" [(ngModel)]="nuevoEntrenador.campeonActual">
+                      </div>
+            </div>
+          </div>
+          
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button 
+                            type="button" 
+                            class="btn btn-success" 
+                            data-dismiss="modal"
+                            (click)="guardarNuevoEntrenador()"
+                            >Crear</button>
+                        </div>
+                      </div>
+                    </div>
+          
+        </div>
+      </div>
+    </div>

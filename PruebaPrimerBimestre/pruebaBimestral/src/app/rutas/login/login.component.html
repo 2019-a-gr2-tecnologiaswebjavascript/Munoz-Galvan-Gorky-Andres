@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label for="usr" class="text-center">Nombre de cajero:</label>
+        <input [(ngModel)]="nombre" 
+        type="text" 
+        class="form-control" 
+        id="usr" 
+        required>
+      </div>
+    </div>
+    <div class="col-sm-4"></div>
+
+    <div class="col-sm-5"></div>
+    <div class="col-sm-2">
+      <div class="form-group">
+        <button (click)="guardarCajero()" class="btn btn-success btn-block">Entrar</button>
+      </div>
+    </div>
+    <div class="col-sm-5"></div>
+  </div>
+</div>
