@@ -11,6 +11,7 @@ import { Pokemon } from 'src/app/interfaces/pokemon';
 export class ComprarComponent implements OnInit {
 
   nuevaFactura:Factura={} as any;
+  validado = false;
   precioTotal:number=0;
   productoAIngresar:Pokemon={} as any;
   productoSeleccionado:Pokemon[]=[];
@@ -52,6 +53,17 @@ export class ComprarComponent implements OnInit {
     this.nuevaFactura.nombreCajero = this._nombreCajeroService.nombreCajero;
     this._nombreCajeroService.bddFacturas.push(this.nuevaFactura);
     console.log(this._nombreCajeroService.bddFacturas)
+  }
+
+  validar():boolean{
+    if(this.nuevaFactura.nombre === "" || this.nuevaFactura.cedula.toString() === ""){
+      this.validado = false
+    }else{
+      this.guardarFactura()
+      this.validado = false
+    }
+    return this.validado
+
   }
 
 }
