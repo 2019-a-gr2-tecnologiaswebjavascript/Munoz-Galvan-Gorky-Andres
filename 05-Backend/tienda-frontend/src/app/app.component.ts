@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { UsuarioHttpService } from './servicios/http/usuario-http.service';
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit{
               private readonly _usuarioHttpService:UsuarioHttpService){
   }
 
-  ngOnInit(){
+  /*ngOnInit(){
     const usuarioCrear$ = this._usuarioHttpService
     .crear({nombre:"Felipe",apellido:"Caicedo"});
 
@@ -27,5 +27,19 @@ export class AppComponent implements OnInit{
         console.error(error);
       }
     );
+  }*/
+
+  ngOnInit(){
+    const usuarios$ = this._usuarioHttpService.buscarTodos();
+    usuarios$.subscribe(
+      (registro)=>{
+        console.log(registro);
+      },
+      (error)=>{
+        console.error(error);
+      }
+    );
+
   }
+
 }
