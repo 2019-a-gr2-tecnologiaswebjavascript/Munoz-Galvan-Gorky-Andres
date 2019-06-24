@@ -1,13 +1,13 @@
 import { HttpSailsPrincipal } from './http-sails-principal';
-import { Usuario } from '../../dto/usuario';
 import { Injectable } from '@angular/core';
+import {Producto} from '../../dto/producto';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 
 @Injectable()
-export class UsuarioHttpService extends HttpSailsPrincipal<Usuario>{
+export class ProductoUsuarioHttpService extends HttpSailsPrincipal<ProductoUsuario>{
     constructor(private readonly _httpClient:HttpClient){
-        super(_httpClient,environment.url,'/Usuario');
+        super(_httpClient,environment.url,'/ProductoUsuario');
     }
 
 }
