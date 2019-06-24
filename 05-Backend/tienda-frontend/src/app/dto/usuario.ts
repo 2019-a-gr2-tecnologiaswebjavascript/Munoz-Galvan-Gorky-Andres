@@ -8,7 +8,7 @@ export interface Usuario{
     username:string,
     sueldo?:number,
     estaCasado?:boolean,
-    tipoUsuario?:string,
+    tipoUsuario?:'normal'|'premium'|'pendiente',
     correo?:string,
     arregloProductosUsuario?:any[]
 

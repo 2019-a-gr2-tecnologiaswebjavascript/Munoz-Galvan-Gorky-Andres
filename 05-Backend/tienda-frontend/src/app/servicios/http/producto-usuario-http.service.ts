@@ -1,6 +1,6 @@
 import { HttpSailsPrincipal } from './http-sails-principal';
 import { Injectable } from '@angular/core';
-import {Producto} from '../../dto/producto';
+import {ProductoUsuario} from '../../dto/producto-usuario';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 

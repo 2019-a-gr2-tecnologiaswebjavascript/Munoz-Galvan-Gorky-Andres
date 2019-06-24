@@ -15,6 +15,7 @@ module.exports = {
     },
     codigo:{
       type:'string',
+      unique:true,
       required:true,
       minLength: 4
     },
