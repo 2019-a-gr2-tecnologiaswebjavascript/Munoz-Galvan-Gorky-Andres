@@ -31,8 +31,26 @@ module.exports = {
       unique:true,
       minLength:3,
       maxLength:60,
+    },
+    sueldo:{
+      type:'number',
+      min:100,
+      max:500.00,
+      defaultsTo:100
+    },
+    estaCasado:{
+      type:'boolean',
+      defaultsTo:false,
+    },
+    tipoUsuario:{
+      type:'string',
+      enum:['normal','pendiente','premium'],
+      defaulstTo: 'normal'
+    },
+    correo:{
+      type:'string',
+      isEmail: true
     }
-
   },
 
 };
