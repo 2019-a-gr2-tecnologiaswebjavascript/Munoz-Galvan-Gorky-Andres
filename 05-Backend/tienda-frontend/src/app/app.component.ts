@@ -11,6 +11,7 @@ import { ProductoUsuarioHttpService } from './servicios/http/producto-usuario-ht
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+  archivo:File;
   title = 'tienda-frontend';
 
   constructor(private readonly _HttpClient:HttpClient,
@@ -19,6 +20,34 @@ export class AppComponent implements OnInit{
               private readonly _productoUsuarioHttpService:ProductoUsuarioHttpService){
   }
 
+  
+  seleccionarArchivo(evento){
+    const listaArchivos:FileList = evento.target.files;
+    const validaciones = {
+      existeArchivo: listaArchivos.length> 0
+    }
+    if(validaciones.existeArchivo){
+      const archivo = listaArchivos[0];
+      console.log(archivo);
+      this.archivo = archivo;
+    }
+
+  }
+
+  enviarArchivo(){
+    const producto$ = this._productoHttpService
+                          .cargarArchivo(
+                            this.archivo,1);
+    producto$
+      .subscribe(
+        (datos)=>{
+          console.log(datos);
+        },
+        (error)=>{
+          console.error(error);
+        }
+      );
+  }
   ngOnInit(){
     const usuarioCrear$ = this._usuarioHttpService
     .crear({
