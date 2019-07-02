@@ -19,10 +19,22 @@ module.exports = {
       required:true,
       minLength: 4
     },
+    tamanio:{
+      type:'string'
+
+    },
+    descriptorArchivo:{
+      type:'string'
+
+    },
+    tipo:{
+      type:'string'
+
+    },
     arregloProductosUsuario:{
       collection: 'productoUsuario', // Modelo a relacionarse
       via:'fkProducto',
-    }
+    },
 
   },
 
