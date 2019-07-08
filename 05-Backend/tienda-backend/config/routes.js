@@ -34,4 +34,7 @@ module.exports.routes = {
   ***************************************************************************/
 
 
+  'POST /prenderLed/:idLed':{
+    action: 'led/encenderLed'
+  }
 };

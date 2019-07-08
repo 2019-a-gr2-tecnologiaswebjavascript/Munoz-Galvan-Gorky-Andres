@@ -42,7 +42,6 @@ module.exports = {
 
                         }catch(e){
                             return res.error({
-                                v\\
                             })
                         }
 
@@ -62,16 +61,5 @@ module.exports = {
             })
         }       
     }
-};
-
-
-
-
-    }
-
-    
-    
-  
-
 };
 
