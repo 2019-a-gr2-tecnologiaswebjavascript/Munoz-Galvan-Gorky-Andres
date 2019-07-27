@@ -11,7 +11,7 @@ module.exports = {
 
     nombreComprador:{
       type:'string',
-      required
+      required: true
     }
   },
 

@@ -4,7 +4,8 @@
     <div class="col-sm-4">
       <div class="form-group">
         <label for="usr" class="text-center">Nombre de cajero:</label>
-        <input [(ngModel)]="nombre" 
+        <input [(ngModel)]="nombre"
+               #vtNombre="ngModel"
         type="text" 
         class="form-control" 
         id="usr" 

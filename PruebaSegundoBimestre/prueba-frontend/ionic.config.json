@@ -1,5 +1,7 @@
 {
   "name": "prueba-frontend",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
