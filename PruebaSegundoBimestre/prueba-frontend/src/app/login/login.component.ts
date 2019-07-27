@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CajeroHttpService} from "../servicios/http/cajero-http.service";
 
 @Component({
   selector: 'app-login',
@@ -11,9 +12,10 @@ export class LoginComponent implements OnInit {
   password: string;
 
   iniciarSesion() {
-    console.log(this.nombreUsuario, ' ', this.password);
+    this._CajeroHttpService.buscarTodos();
   }
-  constructor() { }
+  // tslint:disable-next-line:variable-name
+  constructor(private readonly _CajeroHttpService: CajeroHttpService) {  }
 
   ngOnInit() {}
 

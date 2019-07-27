@@ -21,6 +21,10 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
 
+  'POST /cajero/hola':{
+    action:'cajero/login'
+  }
+
 
   /***************************************************************************
   *                                                                          *
