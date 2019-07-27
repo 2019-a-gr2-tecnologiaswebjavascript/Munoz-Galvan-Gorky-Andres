@@ -5,8 +5,8 @@ import {LoginComponent} from './login/login.component';
 const routes: Routes = [
   {
     path: '', component: LoginComponent
-  }
-/*  { path: '#', loadChildren: './tabs/tabs.module#TabsPageModule' },*/
+  },
+  { path: 'menu-principal', loadChildren: './tabs/tabs.module#TabsPageModule' },
 ];
 @NgModule({
   imports: [

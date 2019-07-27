@@ -64,6 +64,16 @@ export class HttpSailsPrincipal<ClaseEntidad> {
             );
     }
 
+    login(cajero: ClaseEntidad): Observable<ClaseEntidad> {
+        const url = `${this.url}${this.modelo}/login`;
+        return this.httpClient
+            .post(url, cajero)
+            .pipe(
+                map((datos) => {
+            return datos as ClaseEntidad;
+        }));
+    }
+
     buscarTodos(): Observable<ClaseEntidad[]> {
         const url = `${this.url}${this.modelo}`;
         return this.httpClient

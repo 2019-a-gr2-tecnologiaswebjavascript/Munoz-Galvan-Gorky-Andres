@@ -21,7 +21,7 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
 
-  'POST /cajero/hola':{
+  'POST /Cajero/login':{
     action:'cajero/login'
   }
 

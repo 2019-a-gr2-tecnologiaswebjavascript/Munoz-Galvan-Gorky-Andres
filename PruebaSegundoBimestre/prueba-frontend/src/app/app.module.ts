@@ -10,14 +10,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {LoginComponent} from './login/login.component';
 import {FormsModule} from '@angular/forms';
+import {CajeroHttpService} from './servicios/http/cajero-http.service';
+import {HttpClientModule} from '@angular/common/http';
+import {AuthService} from './servicios/auth/auth.service';
+
 
 @NgModule({
   declarations: [AppComponent, LoginComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,
+    CajeroHttpService,
+    AuthService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

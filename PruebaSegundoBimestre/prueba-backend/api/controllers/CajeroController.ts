@@ -4,7 +4,9 @@
  * @description :: Server-side actions for handling incoming requests.
  * @help        :: See https://sailsjs.com/docs/concepts/actions
  */
+import {Cajero} from "../../../prueba-frontend/src/app/dto/cajero";
 
+declare var Cajero;
 module.exports = {
 
   login: async function (req, res) {
@@ -14,14 +16,14 @@ module.exports = {
     const password = params.password;
 
     try {
-      const cajero = await Cajero.find({
+      const cajero:Cajero = await Cajero.find({
         where: {
           nombre:nombreUsuario,
           password:password
         },
       });
       return res.ok({
-        cajero: cajero
+        cajero,
       });
     } catch (e) {
       console.error(e);

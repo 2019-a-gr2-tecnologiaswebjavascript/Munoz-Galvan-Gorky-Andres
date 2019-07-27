@@ -12,4 +12,7 @@ export class CajeroHttpService extends HttpSailsPrincipal<Cajero> {
         super(_HttpClient, environment.url, '/Cajero');
     }
 
+    obtenerLogin(cajero: Cajero) {
+        return this._HttpClient.post(environment.url + '/Cajero/login', cajero);
+    }
 }
