@@ -9,44 +9,53 @@
   <div class="separador"></div>
 
     <form #formularioEditarEntrenador="ngForm"
-    novalidate
-    (submit)="actualizarEntrenador()">
+          novalidate
+          (submit)="actualizarEntrenador()">
         <ion-item>
             <ion-label>Nombre:</ion-label>
             <ion-input clearInput [(ngModel)]="entrenador.nombre"
-                        name="nombre"></ion-input>
-          </ion-item>
-
-          <ion-item>
-              <ion-label >Apellido:</ion-label>
-              <ion-input clearInput [(ngModel)]="entrenador.apellido"
-                          name="apellido"></ion-input>
-          </ion-item>
-
-          <ion-item>
-            <ion-label>Fecha de nacimiento:</ion-label>
-            <ion-input clearInput [(ngModel)]="entrenador.fechaNacimiento"
-                          name="fechaNacimiento"></ion-input>
-          </ion-item>
-
-          <ion-item>
-          <ion-label>Número de medallas:</ion-label>
-          <ion-input clearInput [(ngModel)]="entrenador.numeroMedallas"
-          type="number"
-                      name="numeroMedallas"></ion-input>
+                       (change)="cambio()"
+                       name="nombre"></ion-input>
         </ion-item>
 
         <ion-item>
-            <ion-label>Es campeón actual?:</ion-label>
-            <ion-input clearInput [(ngModel)]="entrenador.campeonActual"
-                        name="campeonActual"></ion-input>
-          </ion-item>
+            <ion-label>Apellido:</ion-label>
+            <ion-input clearInput [(ngModel)]="entrenador.apellido"
+                       (change)="cambio()"
+                       name="apellido"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Fecha de nacimiento:</ion-label>
+            <ion-input clearInput [(ngModel)]="entrenador.fechaNacimiento"
+                       (change)="cambio()"
+                       name="fechaNacimiento"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Número de medallas:</ion-label>
+            <ion-input clearInput [(ngModel)]="entrenador.numeroMedallas"
+                       (change)="cambio()"
+                       type="number"
+                       name="numeroMedallas"></ion-input>
+        </ion-item>
+
+
+
+        <ion-item>
+            <ion-label>Es el campeón actual?:</ion-label>
+            <ion-checkbox [checked]="entrenador.campeonActual"
+                          (ionChange)="cambioCampeonActual()"
+                          name="campeonActual"
+            ></ion-checkbox>
+
+        </ion-item>
 
         <ion-row class="botones">
           <ion-col>
               <ion-button type="submit" 
                           color="success"
-                          [disabled]="formularioEditarEntrenador.pristine" 
+                          [disabled]="!formularioCambio"
                           expand="block" >Guardar</ion-button>
           </ion-col>
           <ion-col>

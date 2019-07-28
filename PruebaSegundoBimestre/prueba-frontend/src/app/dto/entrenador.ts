@@ -6,5 +6,5 @@ export interface Entrenador{
     apellido: string;
     fechaNacimiento:string;
     numeroMedallas:string;
-    campeonActual:string;
+    campeonActual:boolean;
 }

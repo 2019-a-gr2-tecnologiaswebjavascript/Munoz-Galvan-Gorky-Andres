@@ -10,6 +10,7 @@ import {EntrenadorHttpService} from "../servicios/http/entrenador-http.service";
 })
 export class ModalEditarEntrenadorPage implements OnInit {
 
+    formularioCambio = false;
   entrenador = {} as Entrenador;
   constructor(private readonly _navParams:NavParams,
               public toastController: ToastController, 
@@ -39,6 +40,19 @@ export class ModalEditarEntrenadorPage implements OnInit {
              this.presentToast('No actualizó el entrenador');
        })
    }
+
+    cambioCampeonActual(){
+      if(this.entrenador.campeonActual === true){
+          this.entrenador.campeonActual = false;
+      }else{
+          this.entrenador.campeonActual = true;
+      }
+      this.cambio();
+    }
+
+    cambio(){
+        this.formularioCambio = true;
+    }
 
    dismiss() {
     this._modalController.dismiss({

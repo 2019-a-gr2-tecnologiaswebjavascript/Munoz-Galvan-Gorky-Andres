@@ -29,7 +29,7 @@
       </ion-list-header>
 
   <ion-item-sliding *ngFor = "let entrenador of entrenadores">
-    <ion-item (click)="irAPokemon(entrenador.id)" >
+    <ion-item [routerLink]="['/pokemon',entrenador.id]" >
         <ion-label>
             <h2>nombre: {{entrenador.nombre}} {{entrenador.apellido}}</h2>
             <h3>{{entrenador.fechaNacimiento}}</h3>

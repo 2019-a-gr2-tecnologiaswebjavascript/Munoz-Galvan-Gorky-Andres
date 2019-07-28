@@ -18,7 +18,7 @@ export class Tab2Page implements OnInit{
     ) {}
 
   buscarEntrenador(){
-    console.log(this.entrenadorABuscar);
+    const $BuscarEntrenador = this._EntrenadorHttpService.buscarTodos()
   }
 
   async openModal(entrenador){
@@ -31,6 +31,8 @@ export class Tab2Page implements OnInit{
   }
 
   irAPokemon(id:number){
+
+
     console.log(id);
   }
 
