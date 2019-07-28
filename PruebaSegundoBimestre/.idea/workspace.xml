@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee98cfa7-6563-48b0-bb1a-914cf74f7a37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/prueba-frontend/src/app/servicios/http/pokemon-http.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-backend/api/controllers/PokemonController.js" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-backend/api/controllers/PokemonController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-backend/api/models/Pokemon.js" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-backend/api/models/Pokemon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-backend/config/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-backend/config/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-backend/views/layouts/layout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-backend/views/layouts/layout.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/dto/pokemon.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/dto/pokemon.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/modal-editar-entrenador/modal-editar-entrenador.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/modal-editar-entrenador/modal-editar-entrenador.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/pokemon/pokemon.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/pokemon/pokemon.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/pokemon/pokemon.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/pokemon/pokemon.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/servicios/http/http-sails-principal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/servicios/http/http-sails-principal.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/tab2/tab2.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/tab2/tab2.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-pokemon/modal-crear-pokemon.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-pokemon/modal-crear-pokemon.page.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,6 +15,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="44" selection-start-line="44" selection-end-line="50" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/pokemon/pokemon.page.ts">
           <provider selected="true" editor-type-id="text-editor">
@@ -44,11 +42,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-pokemon/modal-crear-pokemon.page.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+            <state relative-caret-position="280">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-pokemon/modal-crear-pokemon.page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="622">
+              <caret line="42" column="43" lean-forward="true" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -84,9 +91,9 @@
         <option value="$PROJECT_DIR$/prueba-frontend/src/app/pokemon/pokemon.page.html" />
         <option value="$PROJECT_DIR$/prueba-frontend/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/prueba-frontend/src/app/dto/pokemon.ts" />
-        <option value="$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-pokemon/modal-crear-pokemon.page.html" />
         <option value="$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.ts" />
         <option value="$PROJECT_DIR$/prueba-frontend/src/app/pokemon/pokemon.page.ts" />
+        <option value="$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-pokemon/modal-crear-pokemon.page.html" />
         <option value="$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-pokemon/modal-crear-pokemon.page.ts" />
       </list>
     </option>
@@ -135,7 +142,7 @@
               <item name="prueba-frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modal-crear-pokemon" type="462c0819:PsiDirectoryNode" />
+              <item name="modal-crear-entrenador" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PruebaSegundoBimestre" type="b2602c69:ProjectViewProjectNode" />
@@ -199,12 +206,12 @@
       <option name="presentableId" value="Default" />
       <updated>1564278612146</updated>
       <workItem from="1564278613641" duration="16070000" />
-      <workItem from="1564346410248" duration="4548000" />
+      <workItem from="1564346410248" duration="4752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20618000" />
+    <option name="totallyTimeSpent" value="20822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -427,16 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-editar-entrenador/modal-editar-entrenador.page.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -451,13 +448,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-pokemon/modal-crear-pokemon.page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/pokemon/pokemon.page.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -468,10 +458,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-pokemon/modal-crear-pokemon.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="42" column="43" lean-forward="true" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="44" selection-start-line="44" selection-end-line="50" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-pokemon/modal-crear-pokemon.page.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        <state relative-caret-position="280">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
