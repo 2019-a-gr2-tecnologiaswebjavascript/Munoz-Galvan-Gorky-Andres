@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonPage implements OnInit {
 
+  pokemones: any = [];
+
   constructor() { }
+
+  editarPokemon(pokemon){
+
+  }
+
+  eliminarPokemon(id){
+
+}
 
   ngOnInit() {
   }

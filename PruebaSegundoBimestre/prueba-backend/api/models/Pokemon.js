@@ -18,6 +18,10 @@ module.exports = {
       required:true,
       maxLength:200,
     },
+    precioPokemon:{
+      type:'number',
+      required:true
+    },
     poderEspecialUno:{
       type:'string',
       defaultsTo: 'putear'

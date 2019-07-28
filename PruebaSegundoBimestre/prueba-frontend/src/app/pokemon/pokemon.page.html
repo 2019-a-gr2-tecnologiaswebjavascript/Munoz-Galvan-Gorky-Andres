@@ -4,6 +4,59 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content fullscreen>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <form #formularioUsuario="ngForm"
+              (submit)="buscarEntrenador()">
+          <ion-item>
+            <ion-label position="floating">Buscar entrenador</ion-label>
+            <ion-input type="text"
+                       [(ngModel)]="entrenadorABuscar"
+                       name="entrenadorABuscar"
+            ></ion-input>
+          </ion-item>
+
+          <ion-button type="submit" color="success" class="center">Buscar entrenador</ion-button>
+        </form>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-button (click)="crearEntrenador()" color="success">Crear entrenador</ion-button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-list>
+
+    <ion-list-header>
+      Entrenadores
+    </ion-list-header>
+
+    <ion-item-sliding *ngFor = "let pokemon of pokemones">
+      <ion-item [routerLink]="['/pokemon',pokemon.id]" >
+        <ion-label>
+          <h2>Nombre: {{pokemon.nombrePokemon}}</h2>
+          <h3>Nivel: {{pokemon.nivel}}</h3>
+          <p>{{pokemon.numeroMedallas}}</p>
+          <p>{{pokemon.campeonActual}}</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="start">
+        <ion-item-option color="success"  (click)="editarPokemon(pokemon)">Editar</ion-item-option>
+      </ion-item-options>
+      <ion-item-options side="end">
+        <ion-item-option color="success" (click)="eliminarPokemon(pokemon.id)">Eliminar</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>

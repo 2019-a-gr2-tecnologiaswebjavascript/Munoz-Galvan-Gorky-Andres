@@ -25,7 +25,7 @@ module.exports.routes = {
     action:'cajero/login'
   },
   'GET /Entrenador/buscar?':{
-    action: 'entrenador/buscarEntrenador'
+    action: 'pokemon/buscarEntrenador'
   }
 
 
