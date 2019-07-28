@@ -23,6 +23,9 @@ module.exports.routes = {
 
   'POST /Cajero/login':{
     action:'cajero/login'
+  },
+  'GET /Entrenador/buscar?':{
+    action: 'entrenador/buscarEntrenador'
   }
 
 

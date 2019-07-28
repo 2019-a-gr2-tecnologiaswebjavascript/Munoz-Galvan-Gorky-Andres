@@ -25,6 +25,17 @@ export class HttpSailsPrincipal<ClaseEntidad> {
             );
     }
 
+    buscar(nombreVariable, parametrosBusqueda): Observable<ClaseEntidad[]> {
+        const url = `${this.url}${this.modelo}/buscar?${nombreVariable}=${parametrosBusqueda}`;
+        return this.httpClient
+            .get(url)
+            .pipe(
+                map(
+                    (datos) => {
+                        return datos as ClaseEntidad[];
+        }));
+    }
+
     borrar(id: number): Observable<ClaseEntidad[]> {
         const url = `${this.url}${this.modelo}/${id}`;
         return this.httpClient

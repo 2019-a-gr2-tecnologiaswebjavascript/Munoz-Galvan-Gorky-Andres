@@ -8,19 +8,34 @@
 
 <ion-content fullscreen>
 
-      <form #formularioUsuario="ngForm"
-      (submit)="buscarEntrenador()">
-  <ion-item>
-    <ion-label position="floating">Buscar entrenador</ion-label>
-    <ion-input type="text"
-              [(ngModel)]="entrenadorABuscar"
-              name="entrenadorABuscar"
-    ></ion-input>
-  </ion-item>
+    <ion-grid>
+        <ion-row>
+            <ion-col></ion-col>
+            <ion-col>
+                <form #formularioUsuario="ngForm"
+                      (submit)="buscarEntrenador()">
+                    <ion-item>
+                        <ion-label position="floating">Buscar entrenador</ion-label>
+                        <ion-input type="text"
+                                   [(ngModel)]="entrenadorABuscar"
+                                   name="entrenadorABuscar"
+                        ></ion-input>
+                    </ion-item>
 
-  <ion-button type="submit" color="success" class="center">Buscar entrenador</ion-button>
-  </form>
-  <ion-button type="submit" color="success">Crear entrenador</ion-button>
+                    <ion-button type="submit" color="success" class="center">Buscar entrenador</ion-button>
+                </form>
+            </ion-col>
+            <ion-col></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col></ion-col>
+            <ion-col>
+                <ion-button (click)="crearEntrenador()" color="success">Crear entrenador</ion-button>
+            </ion-col>
+            <ion-col></ion-col>
+        </ion-row>
+    </ion-grid>
+
 
 <ion-list>
 

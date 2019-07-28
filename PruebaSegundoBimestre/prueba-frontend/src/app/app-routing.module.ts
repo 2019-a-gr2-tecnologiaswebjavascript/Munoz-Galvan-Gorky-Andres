@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'menu-principal', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'modal-editar-entrenador', loadChildren: './modal-editar-entrenador/modal-editar-entrenador.module#ModalEditarEntrenadorPageModule' },
   { path: 'pokemon/:idEntrenador', loadChildren: './pokemon/pokemon.module#PokemonPageModule' },
+  { path: 'modal-crear-entrenador', loadChildren: './modal-crear-entrenador/modal-crear-entrenador.module#ModalCrearEntrenadorPageModule' },
 ];
 @NgModule({
   imports: [
