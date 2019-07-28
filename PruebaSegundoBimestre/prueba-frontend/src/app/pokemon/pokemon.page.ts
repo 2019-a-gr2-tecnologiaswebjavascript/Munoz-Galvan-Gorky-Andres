@@ -4,6 +4,7 @@ import {ModalCrearEntrenadorPage} from "../modal-crear-entrenador/modal-crear-en
 import {ModalController} from "@ionic/angular";
 import {ActivatedRoute} from "@angular/router";
 import {ModalCrearPokemonPage} from "../modal-crear-pokemon/modal-crear-pokemon.page";
+import {ModalEditarPokemonPage} from "../modal-editar-pokemon/modal-editar-pokemon.page";
 
 @Component({
     selector: 'app-pokemon',
@@ -55,7 +56,18 @@ export class PokemonPage implements OnInit {
 
     }
 
-    editarPokemon(pokemon) {
+    async editarPokemon(pokemon) {
+        const modalEditarPokemon = await this._modalController.create({
+            component: ModalEditarPokemonPage,
+            componentProps: {
+                pokemon
+            }
+        });
+        modalEditarPokemon.onDidDismiss().then(() => {
+                this.listarPokemones(this.idEntrenador);
+            }
+        );
+        return modalEditarPokemon.present();
 
     }
 

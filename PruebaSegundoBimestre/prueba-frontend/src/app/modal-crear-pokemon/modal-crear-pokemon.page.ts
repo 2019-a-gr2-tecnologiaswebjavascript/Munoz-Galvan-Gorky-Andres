@@ -16,6 +16,8 @@ export class ModalCrearPokemonPage implements OnInit {
               private readonly _navParams: NavParams,
               private readonly _toastController: ToastController,
               private readonly _PokemonHttpService:PokemonHttpService) {
+
+    this.nuevoPokemon.fkEntrenador = Number(this._navParams.get('idEntrenador'));
   }
 
   async presentToast(mensaje) {
@@ -44,8 +46,6 @@ export class ModalCrearPokemonPage implements OnInit {
   }
 
   ngOnInit() {
-    this.nuevoPokemon.fkEntrenador = Number(this._navParams.get('idEntrenador'));
-    console.log(this.nuevoPokemon.fkEntrenador);
   }
 
 }

@@ -16,6 +16,7 @@ const routes: Routes = [
     path: 'modal-crear-entrenador',
     loadChildren: './modal-crear-entrenador/modal-crear-entrenador.module#ModalCrearEntrenadorPageModule'
   },  { path: 'modal-crear-pokemon', loadChildren: './modal-crear-pokemon/modal-crear-pokemon.module#ModalCrearPokemonPageModule' },
+  { path: 'modal-editar-pokemon', loadChildren: './modal-editar-pokemon/modal-editar-pokemon.module#ModalEditarPokemonPageModule' },
 
 ];
 @NgModule({

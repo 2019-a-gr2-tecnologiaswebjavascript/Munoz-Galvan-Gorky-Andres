@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modal-editar-pokemon</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="separador"></div>
+
+  <form #formularioEditarEntrenador="ngForm"
+        novalidate
+        (submit)="actualizarPokemon()">
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+      <ion-input clearInput [(ngModel)]="pokemon.nombrePokemon"
+                 (change)="cambio()"
+                 name="nombrePokemon"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Precio:</ion-label>
+      <ion-input clearInput [(ngModel)]="pokemon.precioPokemon"
+                 (change)="cambio()"
+                 type="number"
+                 name="precioPokemon"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha de captura:</ion-label>
+      <ion-input clearInput [(ngModel)]="pokemon.fechaCaptura"
+                 (change)="cambio()"
+                 name="fechaCaptura"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Poder especial uno:</ion-label>
+      <ion-input clearInput [(ngModel)]="pokemon.poderEspecialUno"
+                 (change)="cambio()"
+                 name="poderEspecialUno"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Poder especial dos:</ion-label>
+      <ion-input clearInput [(ngModel)]="pokemon.poderEspecialDos"
+                 (change)="cambio()"
+                 name="poderEspecialDos"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Nivel:</ion-label>
+      <ion-input [(ngModel)]="pokemon.nivel"
+                 (change)="cambio()"
+                 name="nivel"
+      ></ion-input>
+
+    </ion-item>
+
+    <ion-row class="botones">
+      <ion-col>
+        <ion-button type="submit"
+                    color="success"
+                    [disabled]="!formularioCambio"
+                    expand="block" >Guardar</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button  color="success" expand="block" (click)="dismiss()">Cancelar</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </form>
+</ion-content>

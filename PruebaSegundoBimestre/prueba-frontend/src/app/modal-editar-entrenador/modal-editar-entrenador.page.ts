@@ -39,7 +39,7 @@ export class ModalEditarEntrenadorPage implements OnInit {
             (e) => {
                 console.log("error ", e)
                 this.presentToast('No actualizó el entrenador');
-            })
+            });
     }
 
     cambioCampeonActual() {

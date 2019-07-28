@@ -18,6 +18,7 @@ import {ModalEditarEntrenadorPageModule} from './modal-editar-entrenador/modal-e
 import {ModalCrearEntrenadorPageModule} from './modal-crear-entrenador/modal-crear-entrenador.module';
 import {PokemonHttpService} from "./servicios/http/pokemon-http.service";
 import {ModalCrearPokemonPageModule} from "./modal-crear-pokemon/modal-crear-pokemon.module";
+import {ModalEditarPokemonPageModule} from "./modal-editar-pokemon/modal-editar-pokemon.module";
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {ModalCrearPokemonPageModule} from "./modal-crear-pokemon/modal-crear-pok
         HttpClientModule,
         ModalCrearEntrenadorPageModule,
         ModalEditarEntrenadorPageModule,
-        ModalCrearPokemonPageModule],
+        ModalCrearPokemonPageModule,
+        ModalEditarPokemonPageModule],
     providers: [
         StatusBar,
         SplashScreen,
