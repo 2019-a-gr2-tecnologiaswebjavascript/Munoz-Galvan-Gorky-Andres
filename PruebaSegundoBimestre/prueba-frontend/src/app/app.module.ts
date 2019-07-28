@@ -20,6 +20,7 @@ import {PokemonHttpService} from "./servicios/http/pokemon-http.service";
 import {ModalCrearPokemonPageModule} from "./modal-crear-pokemon/modal-crear-pokemon.module";
 import {ModalEditarPokemonPageModule} from "./modal-editar-pokemon/modal-editar-pokemon.module";
 import {EstaLogeadoService} from "./servicios/esta-logeado/esta-logeado.service";
+import {CarritoComprasHttpService} from "./servicios/http/carrito-compras-http.service";
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import {EstaLogeadoService} from "./servicios/esta-logeado/esta-logeado.service"
         PokemonHttpService,
         AuthService,
         EstaLogeadoService,
+        CarritoComprasHttpService,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
     ],
     bootstrap: [AppComponent]
