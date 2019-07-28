@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavParams, ModalController, ToastController } from '@ionic/angular';
 import { Entrenador } from '../dto/entrenador';
+import {EntrenadorHttpService} from "../servicios/http/entrenador-http.service";
 
 @Component({
   selector: 'app-modal-editar-entrenador',
@@ -13,22 +14,30 @@ export class ModalEditarEntrenadorPage implements OnInit {
   constructor(private readonly _navParams:NavParams,
               public toastController: ToastController, 
               private readonly _modalController:ModalController,
-              private readonly _HttpEntrenadorService:HttpEntrenadorService) {
+              private readonly _EntrenadorHttpService: EntrenadorHttpService) {
 
                 this.entrenador = this._navParams.get('entrenador');              
 
    }
 
-   async presentToast() {
+   async presentToast(mensaje) {
     const toast = await this.toastController.create({
-      message: 'No ha hecho ningún cambio',
+      message: mensaje,
       duration: 1000
     });
     toast.present();
   }
 
    async actualizarEntrenador(){
-     const $actualizarEntrenador = await this.
+     const $entrenadorActualizado = await this._EntrenadorHttpService.actualizar(this.entrenador, this.entrenador.id);
+     $entrenadorActualizado.subscribe((value)=>{
+             this.presentToast('Se actualizó el entrenador');
+             this.dismiss();
+     },
+         (e)=>{
+         console.log("error ",e)
+             this.presentToast('No actualizó el entrenador');
+       })
    }
 
    dismiss() {
