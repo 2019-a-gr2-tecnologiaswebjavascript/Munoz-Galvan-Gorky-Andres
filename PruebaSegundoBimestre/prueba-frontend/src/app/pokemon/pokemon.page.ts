@@ -60,7 +60,7 @@ export class PokemonPage implements OnInit {
     }
 
     eliminarPokemon(id) {
-        const $listaPokemones = this._PokemonHttpService.buscarPorID(id);
+        const $listaPokemones = this._PokemonHttpService.borrar(id);
         $listaPokemones.subscribe((data) => {
                 this.listarPokemones(this.idEntrenador);
             },
