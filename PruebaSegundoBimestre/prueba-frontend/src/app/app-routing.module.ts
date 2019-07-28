@@ -7,6 +7,7 @@ const routes: Routes = [
     path: '', component: LoginComponent
   },
   { path: 'menu-principal', loadChildren: './tabs/tabs.module#TabsPageModule' },
+  { path: 'modal-editar-entrenador', loadChildren: './modal-editar-entrenador/modal-editar-entrenador.module#ModalEditarEntrenadorPageModule' },
 ];
 @NgModule({
   imports: [

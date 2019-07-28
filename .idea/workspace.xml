@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="752e50b2-236e-43a0-a7d3-01d489ef98e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/servicios/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/JS-Munoz-Galvan-Gorky-Andres.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JS-Munoz-Galvan-Gorky-Andres.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/api/controllers/CajeroController.js" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/api/controllers/CajeroController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/config/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/config/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/views/layouts/layout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/views/layouts/layout.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/servicios/http/cajero-http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/servicios/http/cajero-http.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/servicios/http/http-sails-principal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/servicios/http/http-sails-principal.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/tabs/tabs.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/tabs/tabs.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/tabs/tabs.router.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/tabs/tabs.router.module.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,83 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/app-routing.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/api/controllers/CajeroController.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/config/routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/tabs/tabs.page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/login/login.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/servicios/http/cajero-http.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/servicios/http/http-sails-principal.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="73" column="12" lean-forward="true" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -150,6 +61,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,14 +176,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Web-Munoz-Galvan-Gorky-Andres" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -317,18 +228,18 @@
       <workItem from="1563931818832" duration="15000" />
       <workItem from="1563932285535" duration="11000" />
       <workItem from="1564013317216" duration="821000" />
-      <workItem from="1564177921592" duration="20088000" />
+      <workItem from="1564177921592" duration="20326000" />
+      <workItem from="1564240906471" duration="205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22994000" />
+    <option name="totallyTimeSpent" value="23437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -341,7 +252,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2837607" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.18290599" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -600,13 +511,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/servicios/http/http-sails-principal.ts">
+    <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/login/login.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="73" column="12" lean-forward="true" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
+        <state relative-caret-position="-16">
+          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding>
-            <element signature="e#0#48#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/tabs/tabs.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/config/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/api/controllers/CajeroController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -620,20 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/config/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/tabs/tabs.page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/servicios/http/cajero-http.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -644,19 +562,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-backend/api/controllers/CajeroController.ts">
+    <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/servicios/http/http-sails-principal.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PruebaSegundoBimestre/prueba-frontend/src/app/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="277">
+          <caret line="73" column="12" lean-forward="true" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>

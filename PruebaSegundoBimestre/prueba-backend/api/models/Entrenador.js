@@ -13,7 +13,7 @@ module.exports = {
       type:'string',
       required:true,
     },
-    appelido:{
+    apellido:{
       type:'string',
       required: true
     },

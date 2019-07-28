@@ -49,13 +49,6 @@ export class LoginComponent implements OnInit {
     );
   }
 
- /*   if (cajeroRes.nombreCajero === undefined) {
-    this.presentToast();
-} else {
-    console.log(cajeroRes.nombreCajero);
-    this._Route.navigate(['/menu-principal/tabs/tab1']);
-}*/
-
   ngOnInit() {}
 
 }

@@ -13,16 +13,19 @@ import {FormsModule} from '@angular/forms';
 import {CajeroHttpService} from './servicios/http/cajero-http.service';
 import {HttpClientModule} from '@angular/common/http';
 import {AuthService} from './servicios/auth/auth.service';
+import { EntrenadorHttpService } from './servicios/http/entrenador-http.service';
+import { ModalEditarEntrenadorPageModule } from './modal-editar-entrenador/modal-editar-entrenador.module';
 
 
 @NgModule({
   declarations: [AppComponent, LoginComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, HttpClientModule,ModalEditarEntrenadorPageModule ],
   providers: [
     StatusBar,
     SplashScreen,
     CajeroHttpService,
+    EntrenadorHttpService,
     AuthService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
