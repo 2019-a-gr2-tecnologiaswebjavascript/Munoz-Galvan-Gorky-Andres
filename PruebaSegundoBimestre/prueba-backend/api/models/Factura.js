@@ -12,6 +12,27 @@ module.exports = {
     nombreComprador:{
       type:'string',
       required: true
+    },
+    cedulaComprador:{
+      type:'string',
+      required:true
+    },
+    direccionComprador:{
+      type:'string',
+    },
+    telefonoComprador:{
+      type:'number',
+    },
+    correoComprador:{
+      type:'string'
+    },
+    total:{
+      type:'number',
+      required:true
+    },
+    nombreCajero:{
+      type:'string',
+      required:true
     }
   },
 

@@ -3,6 +3,7 @@ import {CajeroHttpService} from '../servicios/http/cajero-http.service';
 import {Router} from '@angular/router';
 import {ToastController} from '@ionic/angular';
 import {Cajero} from "../dto/cajero";
+import {AuthService} from "../servicios/auth/auth.service";
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ import {Cajero} from "../dto/cajero";
 export class LoginComponent implements OnInit {
 
   constructor(private readonly _CajeroHttpService: CajeroHttpService, private readonly _Route: Router,
-              public toastController: ToastController) {  }
+              public toastController: ToastController, private readonly _AuthService: AuthService) {  }
 
   nombreUsuario: string;
   password: string;
@@ -40,7 +41,7 @@ export class LoginComponent implements OnInit {
                 if (this.x.cajero.length === 0) {
                     this.presentToast();
                 } else {
-                    this._Route.navigate(['/menu-principal/tabs/tab1']);
+                    this._AuthService.login(this.nombreUsuario);
                 }
             },
             error1 => {

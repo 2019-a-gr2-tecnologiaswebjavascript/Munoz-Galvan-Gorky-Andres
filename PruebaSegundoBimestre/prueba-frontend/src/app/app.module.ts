@@ -19,6 +19,7 @@ import {ModalCrearEntrenadorPageModule} from './modal-crear-entrenador/modal-cre
 import {PokemonHttpService} from "./servicios/http/pokemon-http.service";
 import {ModalCrearPokemonPageModule} from "./modal-crear-pokemon/modal-crear-pokemon.module";
 import {ModalEditarPokemonPageModule} from "./modal-editar-pokemon/modal-editar-pokemon.module";
+import {EstaLogeadoService} from "./servicios/esta-logeado/esta-logeado.service";
 
 
 @NgModule({
@@ -40,6 +41,8 @@ import {ModalEditarPokemonPageModule} from "./modal-editar-pokemon/modal-editar-
         EntrenadorHttpService,
         AuthService,
         PokemonHttpService,
+        AuthService,
+        EstaLogeadoService,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
     ],
     bootstrap: [AppComponent]

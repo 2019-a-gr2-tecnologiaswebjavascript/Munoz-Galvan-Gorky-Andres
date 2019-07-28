@@ -6,15 +6,17 @@ import {Router} from '@angular/router';
 })
 export class AuthService {
 
+    nombreUsuario = '';
     estaLogeado = false;
+
     // tslint:disable-next-line:variable-name
     constructor(private readonly _router: Router) {
     }
 
-    login() {
-            this.estaLogeado = true;
-            const url = ['/menu-principal'];
-            this._router.navigate(url);
-            return true;
+    login(nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+        this.estaLogeado = true;
+        this._router.navigate(['/menu-principal/tabs/tab1']);
+        return true;
     }
 }
