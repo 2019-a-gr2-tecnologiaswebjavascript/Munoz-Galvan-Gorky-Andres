@@ -14,7 +14,8 @@ import {ModalEditarPokemonPage} from "../modal-editar-pokemon/modal-editar-pokem
 export class PokemonPage implements OnInit {
 
     pokemones: any = [];
-    pokemonABuscar;
+    auxPokemones: any = [];
+    pokemonABuscar = '';
     idEntrenador = 0;
 
     // tslint:disable-next-line:variable-name
@@ -24,9 +25,21 @@ export class PokemonPage implements OnInit {
                 private readonly _modalController: ModalController) {
     }
 
-    buscarPokemon(){
-
+    buscarPokemon() {
+        if (this.pokemonABuscar.length === 0) {
+            this.listarPokemones(this.idEntrenador);
+        } else {
+            const datos = {idEntrenador: this.idEntrenador, nombrePokemon: this.pokemonABuscar};
+            const $buscarPokemon = this._PokemonHttpService.buscarPokemonPorNombre(datos);
+            $buscarPokemon.subscribe((value) => {
+                this.auxPokemones = value;
+                this.pokemones = this.auxPokemones;
+            });
+            this.pokemonABuscar = '';
+        }
     }
+
+
 
     listarPokemones(idEntrenador) {
         const $listaPokemones = this._PokemonHttpService.buscarPorIdEntrenador(idEntrenador);

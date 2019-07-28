@@ -25,6 +25,13 @@ export class HttpSailsPrincipal<ClaseEntidad> {
             );
     }
 
+    buscarPokemonPorNombre(parametrosBusqueda): Observable<ClaseEntidad[]> {
+        const url = `${this.url}${this.modelo}/buscarPokemon`;
+        return this.httpClient.post(url, parametrosBusqueda).pipe(map((datos) => {
+            return datos as ClaseEntidad[];
+        }));
+    }
+
     buscar(nombreVariable, parametrosBusqueda): Observable<ClaseEntidad[]> {
         const url = `${this.url}${this.modelo}/buscar?${nombreVariable}=${parametrosBusqueda}`;
         return this.httpClient
