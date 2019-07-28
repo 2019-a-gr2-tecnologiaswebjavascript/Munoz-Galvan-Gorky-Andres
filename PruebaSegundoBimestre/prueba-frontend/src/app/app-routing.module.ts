@@ -6,10 +6,17 @@ const routes: Routes = [
   {
     path: '', component: LoginComponent
   },
-  { path: 'menu-principal', loadChildren: './tabs/tabs.module#TabsPageModule' },
-  { path: 'modal-editar-entrenador', loadChildren: './modal-editar-entrenador/modal-editar-entrenador.module#ModalEditarEntrenadorPageModule' },
-  { path: 'pokemon/:idEntrenador', loadChildren: './pokemon/pokemon.module#PokemonPageModule' },
-  { path: 'modal-crear-entrenador', loadChildren: './modal-crear-entrenador/modal-crear-entrenador.module#ModalCrearEntrenadorPageModule' },
+  {path: 'menu-principal', loadChildren: './tabs/tabs.module#TabsPageModule'},
+  {
+    path: 'modal-editar-entrenador',
+    loadChildren: './modal-editar-entrenador/modal-editar-entrenador.module#ModalEditarEntrenadorPageModule'
+  },
+  {path: 'pokemon/:idEntrenador', loadChildren: './pokemon/pokemon.module#PokemonPageModule'},
+  {
+    path: 'modal-crear-entrenador',
+    loadChildren: './modal-crear-entrenador/modal-crear-entrenador.module#ModalCrearEntrenadorPageModule'
+  },  { path: 'modal-crear-pokemon', loadChildren: './modal-crear-pokemon/modal-crear-pokemon.module#ModalCrearPokemonPageModule' },
+
 ];
 @NgModule({
   imports: [

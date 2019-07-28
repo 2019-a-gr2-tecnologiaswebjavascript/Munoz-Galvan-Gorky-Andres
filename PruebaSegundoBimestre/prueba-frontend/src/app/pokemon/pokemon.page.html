@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>pokemon</ion-title>
+    <ion-title>Pokemones</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,16 +12,16 @@
       <ion-col></ion-col>
       <ion-col>
         <form #formularioUsuario="ngForm"
-              (submit)="buscarEntrenador()">
+              (submit)="buscarPokemon()">
           <ion-item>
-            <ion-label position="floating">Buscar entrenador</ion-label>
+            <ion-label position="floating">Buscar pokemon</ion-label>
             <ion-input type="text"
-                       [(ngModel)]="entrenadorABuscar"
-                       name="entrenadorABuscar"
+                       [(ngModel)]="pokemonABuscar"
+                       name="pokemonABuscar"
             ></ion-input>
           </ion-item>
 
-          <ion-button type="submit" color="success" class="center">Buscar entrenador</ion-button>
+          <ion-button type="submit" color="success" class="center">Buscar pokemon</ion-button>
         </form>
       </ion-col>
       <ion-col></ion-col>
@@ -29,7 +29,7 @@
     <ion-row>
       <ion-col></ion-col>
       <ion-col>
-        <ion-button (click)="crearEntrenador()" color="success">Crear entrenador</ion-button>
+        <ion-button (click)="crearPokemon()" color="success">Crear pokemon</ion-button>
       </ion-col>
       <ion-col></ion-col>
     </ion-row>
@@ -39,16 +39,15 @@
   <ion-list>
 
     <ion-list-header>
-      Entrenadores
+      Lista de Pokemones
     </ion-list-header>
 
     <ion-item-sliding *ngFor = "let pokemon of pokemones">
-      <ion-item [routerLink]="['/pokemon',pokemon.id]" >
+      <ion-item>
         <ion-label>
           <h2>Nombre: {{pokemon.nombrePokemon}}</h2>
           <h3>Nivel: {{pokemon.nivel}}</h3>
-          <p>{{pokemon.numeroMedallas}}</p>
-          <p>{{pokemon.campeonActual}}</p>
+          <p>Poder especial: {{pokemon.poderEspecialUno}}</p>
         </ion-label>
       </ion-item>
       <ion-item-options side="start">

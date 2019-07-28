@@ -24,8 +24,11 @@ module.exports.routes = {
   'POST /Cajero/login':{
     action:'cajero/login'
   },
+  'GET /Pokemon?':{
+    action: 'pokemon/buscarPokemonesPorEntrenador'
+  },
   'GET /Entrenador/buscar?':{
-    action: 'pokemon/buscarEntrenador'
+    action: 'entrenador/buscarEntrenador'
   }
 
 

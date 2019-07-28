@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modal-crear-pokemon</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-grid>
+
+    <form #formularioCrearPokemon="ngForm"
+          (submit)="guardarPokemon()"
+    >
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Nombre:</ion-label>
+          <ion-input clearInput [(ngModel)]="nuevoPokemon.nombrePokemon"
+                     required
+                     pattern="[A-Za-z]+"
+                     name="nombrePokemon"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Precio:</ion-label>
+          <ion-input clearInput [(ngModel)]="nuevoPokemon.precioPokemon"
+                     required
+                     type="number"
+                     name="precioPokemon"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item >
+          <ion-label>Fecha de captura:</ion-label>
+          <ion-datetime displayFormat="YYYY-MM-DD"
+                        placeholder="YYYY-MM-DD"
+                        [(ngModel)] = "nuevoPokemon.fechaCaptura"
+                        pickerOptions="animated:true"
+                        name="fechaCaptura"
+                        (ionChange)="cambioFecha()"
+          ></ion-datetime>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Poder especial uno:</ion-label>
+          <ion-input clearInput [(ngModel)]="nuevoPokemon.poderEspecialUno"
+                     name="poderEspecialUno"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Poder especial dos:</ion-label>
+          <ion-input clearInput [(ngModel)]="nuevoPokemon.poderEspecialDos"
+                     name="poderEspecialDos"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Nivel:</ion-label>
+          <ion-input clearInput [(ngModel)]="nuevoPokemon.nivel"
+                     type="number"
+                     name="nivel"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row class="botones">
+        <ion-col>
+          <ion-button type="submit"
+                      color="success"
+                      [disabled]="formularioCrearPokemon.invalid"
+                      expand="block" >Guardar</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button  color="success" expand="block" (click)="dismiss()">Cancelar</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+
+
+  </ion-grid>
+
+</ion-content>

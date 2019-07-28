@@ -85,6 +85,16 @@ export class HttpSailsPrincipal<ClaseEntidad> {
         }));
     }
 
+    buscarPorIdEntrenador(idEntrenador): Observable<ClaseEntidad[]> {
+        const url = `${this.url}${this.modelo}?idEntrenador=` + idEntrenador;
+        return this.httpClient
+            .get(url)
+            .pipe(
+                map((datos) => {
+            return datos as ClaseEntidad[];
+        }));
+    }
+
     buscarTodos(): Observable<ClaseEntidad[]> {
         const url = `${this.url}${this.modelo}`;
         return this.httpClient

@@ -9,10 +9,6 @@ module.exports = {
 
   attributes: {
 
-    numeroPokemon:{
-      type:'number',
-      required:true,
-    },
     nombrePokemon:{
       type:'string',
       required:true,

@@ -16,6 +16,8 @@ import {AuthService} from './servicios/auth/auth.service';
 import {EntrenadorHttpService} from './servicios/http/entrenador-http.service';
 import {ModalEditarEntrenadorPageModule} from './modal-editar-entrenador/modal-editar-entrenador.module';
 import {ModalCrearEntrenadorPageModule} from './modal-crear-entrenador/modal-crear-entrenador.module';
+import {PokemonHttpService} from "./servicios/http/pokemon-http.service";
+import {ModalCrearPokemonPageModule} from "./modal-crear-pokemon/modal-crear-pokemon.module";
 
 
 @NgModule({
@@ -27,13 +29,15 @@ import {ModalCrearEntrenadorPageModule} from './modal-crear-entrenador/modal-cre
         FormsModule,
         HttpClientModule,
         ModalCrearEntrenadorPageModule,
-        ModalEditarEntrenadorPageModule],
+        ModalEditarEntrenadorPageModule,
+        ModalCrearPokemonPageModule],
     providers: [
         StatusBar,
         SplashScreen,
         CajeroHttpService,
         EntrenadorHttpService,
         AuthService,
+        PokemonHttpService,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
     ],
     bootstrap: [AppComponent]
