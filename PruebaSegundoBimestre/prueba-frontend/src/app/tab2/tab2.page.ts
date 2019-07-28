@@ -3,6 +3,7 @@ import {Entrenador} from '../dto/entrenador'
 import {EntrenadorHttpService} from '../servicios/http/entrenador-http.service';
 import {NavController, ModalController} from '@ionic/angular';
 import {ModalEditarEntrenadorPage} from '../modal-editar-entrenador/modal-editar-entrenador.page';
+import {ModalCrearEntrenadorPage} from "../modal-crear-entrenador/modal-crear-entrenador.page";
 
 @Component({
     selector: 'app-tab2',
@@ -45,8 +46,16 @@ export class Tab2Page implements OnInit {
         }
     }
 
-    async crearEntrenador(){
+    async crearEntrenador() {
 
+        const modalCrearEntrenador = await this._modalController.create({
+            component: ModalCrearEntrenadorPage
+        });
+        modalCrearEntrenador.onDidDismiss().then(() => {
+                this.listarEntrenadores();
+            }
+        )
+        return modalCrearEntrenador.present();
     }
 
     async openModal(entrenador) {
@@ -56,7 +65,7 @@ export class Tab2Page implements OnInit {
             componentProps: {
                 entrenador
             }
-        })
+        });
         return await modalEditarEntrenador.present();
     }
 

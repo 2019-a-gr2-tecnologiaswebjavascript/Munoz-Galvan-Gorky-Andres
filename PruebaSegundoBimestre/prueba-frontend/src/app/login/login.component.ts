@@ -27,27 +27,27 @@ export class LoginComponent implements OnInit {
 
   x:any;
 
-  iniciarSesion() {
-    const cajero: Cajero = {
-      nombreCajero: this.nombreUsuario,
-      password : this.password
-    };
+    iniciarSesion() {
+        const cajero: Cajero = {
+            nombreCajero: this.nombreUsuario,
+            password: this.password
+        };
 
-    
-    this._CajeroHttpService.obtenerLogin(cajero).subscribe(
-        value => {
-          this.x = value;
-          if(this.x.cajero.length === 0){
-            this.presentToast();
-          }else{
-            this._Route.navigate(['/menu-principal/tabs/tab1']);
-          }
-        },
-        error1 => {
-            console.log(error1);
-        }
-    );
-  }
+
+        this._CajeroHttpService.obtenerLogin(cajero).subscribe(
+            value => {
+                this.x = value;
+                if (this.x.cajero.length === 0) {
+                    this.presentToast();
+                } else {
+                    this._Route.navigate(['/menu-principal/tabs/tab1']);
+                }
+            },
+            error1 => {
+                console.log(error1);
+            }
+        );
+    }
 
   ngOnInit() {}
 

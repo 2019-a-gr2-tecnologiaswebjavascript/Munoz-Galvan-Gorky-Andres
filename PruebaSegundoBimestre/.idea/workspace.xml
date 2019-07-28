@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee98cfa7-6563-48b0-bb1a-914cf74f7a37" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/prueba-backend/api/controllers/EntrenadorController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-backend/api/controllers/EntrenadorController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-backend/config/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-backend/config/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba-backend/config/security.js" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-backend/config/security.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prueba-backend/views/layouts/layout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-backend/views/layouts/layout.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/servicios/http/entrenador-http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/servicios/http/entrenador-http.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/servicios/http/http-sails-principal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/servicios/http/http-sails-principal.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/tab2/tab2.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/tab2/tab2.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/modal-editar-entrenador/modal-editar-entrenador.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/modal-editar-entrenador/modal-editar-entrenador.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prueba-frontend/src/app/tab2/tab2.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/app/tab2/tab2.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba-frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prueba-frontend/src/environments/environment.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,28 +23,31 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/tab2/tab2.page.html">
+        <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="32" column="52" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/tab2/tab2.page.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="243">
+              <caret line="47" column="21" lean-forward="true" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/app.module.ts">
+        <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/tab2/tab2.page.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+            <state relative-caret-position="187">
+              <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/servicios/http/entrenador-http.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -64,7 +66,6 @@
         <option value="$PROJECT_DIR$/prueba-frontend/src/app/modal-editar-entrenador/modal-editar-entrenador.module.ts" />
         <option value="$PROJECT_DIR$/prueba-frontend/src/app/dto/entrenador.ts" />
         <option value="$PROJECT_DIR$/prueba-frontend/src/app/modal-editar-entrenador/modal-editar-entrenador.page.html" />
-        <option value="$PROJECT_DIR$/prueba-frontend/src/app/modal-editar-entrenador/modal-editar-entrenador.page.ts" />
         <option value="$PROJECT_DIR$/prueba-frontend/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/prueba-backend/api/controllers/EntrenadorController.js" />
         <option value="$PROJECT_DIR$/prueba-backend/config/routes.js" />
@@ -72,8 +73,14 @@
         <option value="$PROJECT_DIR$/prueba-backend/api/controllers/EntrenadorController.ts" />
         <option value="$PROJECT_DIR$/prueba-frontend/src/app/servicios/http/http-sails-principal.ts" />
         <option value="$PROJECT_DIR$/prueba-frontend/src/app/tab2/tab2.page.html" />
-        <option value="$PROJECT_DIR$/prueba-frontend/src/app/tab2/tab2.page.ts" />
         <option value="$PROJECT_DIR$/prueba-frontend/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/prueba-backend/config/security.js" />
+        <option value="$PROJECT_DIR$/prueba-frontend/src/environments/environment.ts" />
+        <option value="$PROJECT_DIR$/prueba-frontend/src/app/modal-editar-entrenador/modal-editar-entrenador.page.ts" />
+        <option value="$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.html" />
+        <option value="$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.ts" />
+        <option value="$PROJECT_DIR$/prueba-frontend/src/app/login/login.component.ts" />
+        <option value="$PROJECT_DIR$/prueba-frontend/src/app/tab2/tab2.page.ts" />
       </list>
     </option>
   </component>
@@ -127,6 +134,38 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PruebaSegundoBimestre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PruebaSegundoBimestre" type="462c0819:PsiDirectoryNode" />
+              <item name="prueba-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PruebaSegundoBimestre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PruebaSegundoBimestre" type="462c0819:PsiDirectoryNode" />
+              <item name="prueba-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modal-crear-entrenador" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PruebaSegundoBimestre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PruebaSegundoBimestre" type="462c0819:PsiDirectoryNode" />
+              <item name="prueba-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modal-editar-entrenador" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PruebaSegundoBimestre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PruebaSegundoBimestre" type="462c0819:PsiDirectoryNode" />
+              <item name="prueba-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="tab2" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -172,12 +211,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564278612146</updated>
-      <workItem from="1564278613641" duration="10277000" />
+      <workItem from="1564278613641" duration="15903000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10277000" />
+    <option name="totallyTimeSpent" value="15903000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -190,7 +229,7 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Inspection Results" weight="0.32991454" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.2786325" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.21880342" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -222,23 +261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-editar-entrenador/modal-editar-entrenador.page.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-editar-entrenador/modal-editar-entrenador.page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -280,29 +302,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/servicios/http/http-sails-principal.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/servicios/http/entrenador-http.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -317,27 +322,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/tab2/tab2.page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" column="52" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="52" />
+        <state relative-caret-position="83">
+          <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prueba-backend/config/security.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="32" column="62" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/environments/environment.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-editar-entrenador/modal-editar-entrenador.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="51" column="19" lean-forward="true" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-editar-entrenador/modal-editar-entrenador.page.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="24" selection-start-line="24" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/tab3/tab3.page.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/servicios/http/entrenador-http.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/modal-crear-entrenador/modal-crear-entrenador.page.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="47" column="21" lean-forward="true" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/tab2/tab2.page.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prueba-frontend/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
         </state>
       </provider>
     </entry>

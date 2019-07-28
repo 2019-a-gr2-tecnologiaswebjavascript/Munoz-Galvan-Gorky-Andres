@@ -1,9 +1,88 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>modal-crear-entrenador</ion-title>
+    <ion-title>Nuevo entrenador</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-grid>
+
+    <form #formularioCrearEntrenador="ngForm"
+    (submit)="guardarEntrenador()"
+    >
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Nombre:</ion-label>
+          <ion-input clearInput [(ngModel)]="nuevoEntrenador.nombre"
+                     required
+                     pattern="[A-Za-z]+"
+                     name="nombre"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Apellido:</ion-label>
+          <ion-input clearInput [(ngModel)]="nuevoEntrenador.apellido"
+                     required
+                     pattern="[A-Za-z]+"
+                     name="apellido"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item >
+          <ion-label>Fecha de nacimiento:</ion-label>
+          <ion-datetime displayFormat="YYYY-MM-DD"
+                        placeholder="YYYY-MM-DD"
+                        [(ngModel)] = "nuevoEntrenador.fechaNacimiento"
+                        pickerOptions="animated:true"
+                        name="fechaNacimiento"
+                        (ionChange)="cambioFecha()"
+          ></ion-datetime>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Número de medallas:</ion-label>
+          <ion-input clearInput [(ngModel)]="nuevoEntrenador.numeroMedallas"
+                     type="number"
+                     name="numeroMedallas"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-col>
+            <ion-label>¿Es el campeón actual?</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-checkbox [checked]="nuevoEntrenador.campeonActual"
+                          (ionChange)="cambioCampeonActual()"
+                          name="campeonActual"
+            ></ion-checkbox>
+          </ion-col>
+        </ion-item>
+      </ion-row>
+
+      <ion-row class="botones">
+        <ion-col>
+          <ion-button type="submit"
+                      color="success"
+                      [disabled]="formularioCrearEntrenador.invalid"
+                      expand="block" >Guardar</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button  color="success" expand="block" (click)="dismiss()">Cancelar</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+
+
+  </ion-grid>
 
 </ion-content>
