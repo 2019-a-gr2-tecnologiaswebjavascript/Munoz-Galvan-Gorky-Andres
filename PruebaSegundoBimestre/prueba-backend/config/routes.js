@@ -29,6 +29,9 @@ module.exports.routes = {
   },
   'GET /Entrenador/buscar?':{
     action: 'entrenador/buscarEntrenador'
+  },
+  'POST /Pokemon/buscarPokemon':{
+    action: 'pokemon/buscarPokemonesPorNombre'
   }
 
 

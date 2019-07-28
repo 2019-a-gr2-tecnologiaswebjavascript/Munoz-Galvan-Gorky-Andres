@@ -9,17 +9,37 @@ import {Pokemon} from "../../../prueba-frontend/src/app/dto/pokemon";
 declare var Pokemon;
 module.exports = {
 
-  buscarPokemonesPorEntrenador: async function (req,res){
+  buscarPokemonesPorNombre: async function (req, res) {
+    const params = req.allParams();
+    const idEntrenador = Number(params.idEntrenador);
+    const nombrePokemon = params.nombrePokemon;
+    try {
+      let pokemon: Pokemon = await Pokemon.find({
+        where: {
+          fkEntrenador: idEntrenador, nombrePokemon: nombrePokemon
+        }
+      });
+      return res.send(pokemon);
+    } catch (e) {
+      console.error(e);
+      return res.serverError({
+        error: 500,
+        mensaje: 'Error del servidor'
+      });
+    }
+  },
+
+  buscarPokemonesPorEntrenador: async function (req, res) {
     const params = req.allParams();
     const idEntrenador = params.idEntrenador;
     try {
       let pokemon: Pokemon = await Pokemon.find({
-        where:{
-          fkEntrenador:idEntrenador
+        where: {
+          fkEntrenador: idEntrenador
         }
       });
       return res.send(pokemon);
-    }catch (e) {
+    } catch (e) {
       console.error(e);
       return res.serverError({
         error: 500,
@@ -28,7 +48,7 @@ module.exports = {
 
     }
   }
-  
+
 
 };
 
