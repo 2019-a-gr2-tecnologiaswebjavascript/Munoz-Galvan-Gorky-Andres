@@ -56,7 +56,7 @@
     <ion-row>
       <ion-col></ion-col>
       <ion-col>
-        <ion-button color="success" [disabled]="carritoCompras.total==0">Finalizar compra</ion-button>
+        <ion-button color="success" (click)="finalizarCompra()" [disabled]="carritoCompras.total==0">Finalizar compra</ion-button>
       </ion-col>
       <ion-col></ion-col>
     </ion-row>

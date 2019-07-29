@@ -1,9 +1,96 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>modal-finalizar-compra</ion-title>
+    <ion-title>Ingresa los datos de la factura</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
+  <div class="separador"></div>
+  <ion-grid>
+
+    <form #formularioguardarFactura="ngForm"
+          (submit)="guardarFactura()"
+    >
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Cédula:</ion-label>
+          <ion-input clearInput [(ngModel)]="carritoCompras.cedulaComprador"
+                     required
+                     type="number"
+                     name="cedulaComprador"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Nombre:</ion-label>
+          <ion-input clearInput [(ngModel)]="carritoCompras.nombreComprador"
+                     required
+                     pattern="[A-Za-z]+"
+                     name="nombreComprador"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Dirección:</ion-label>
+          <ion-input clearInput [(ngModel)]="carritoCompras.direccionComprador"
+                     name="direccionComprador"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Teléfono:</ion-label>
+          <ion-input clearInput [(ngModel)]="carritoCompras.telefonoComprador"
+                     name="telefonoComprador"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Correo electrónico:</ion-label>
+          <ion-input clearInput [(ngModel)]="carritoCompras.correoComprador"
+                     type = "email"
+                     name="correoComprador"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Total:</ion-label>
+          <ion-input disabled [(ngModel)]="carritoCompras.total"
+                     name="total"></ion-input>
+        </ion-item>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Cajero:</ion-label>
+          <ion-input disabled [(ngModel)]="carritoCompras.nombreCajero"
+                     name="nombreCajero"></ion-input>
+        </ion-item>
+      </ion-row>
+
+
+      <ion-row class="botones">
+        <ion-col>
+          <ion-button type="submit"
+                      color="success"
+                      [disabled]="formularioguardarFactura.invalid"
+                      expand="block" >Guardar</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button  color="success" expand="block" (click)="dismiss('cancelar')">Cancelar</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+
+
+  </ion-grid>
 
 </ion-content>
+

@@ -21,6 +21,7 @@ import {ModalCrearPokemonPageModule} from "./modal-crear-pokemon/modal-crear-pok
 import {ModalEditarPokemonPageModule} from "./modal-editar-pokemon/modal-editar-pokemon.module";
 import {EstaLogeadoService} from "./servicios/esta-logeado/esta-logeado.service";
 import {CarritoComprasHttpService} from "./servicios/http/carrito-compras-http.service";
+import {ModalFinalizarCompraPageModule} from "./modal-finalizar-compra/modal-finalizar-compra.module";
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import {CarritoComprasHttpService} from "./servicios/http/carrito-compras-http.s
         AppRoutingModule,
         FormsModule,
         HttpClientModule,
+        ModalFinalizarCompraPageModule,
         ModalCrearEntrenadorPageModule,
         ModalEditarEntrenadorPageModule,
         ModalCrearPokemonPageModule,

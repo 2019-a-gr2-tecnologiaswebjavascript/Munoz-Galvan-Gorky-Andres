@@ -4,6 +4,9 @@ import {PokemonHttpService} from '../servicios/http/pokemon-http.service';
 import {AuthService} from '../servicios/auth/auth.service';
 import {CarritoCompras} from '../dto/carrito-compras';
 import {PokemonSeleccionado} from '../dto/pokemonSeleccionado';
+import {ModalCrearPokemonPage} from "../modal-crear-pokemon/modal-crear-pokemon.page";
+import {ModalController} from "@ionic/angular";
+import {ModalFinalizarCompraPage} from "../modal-finalizar-compra/modal-finalizar-compra.page";
 
 @Component({
     selector: 'app-tab1',
@@ -18,11 +21,35 @@ export class Tab1Page implements OnInit {
     pokemonesSeleccionados: PokemonSeleccionado[] = [];
 
     // tslint:disable-next-line:variable-name
-    constructor(private readonly _PokemonHttpService: PokemonHttpService, private readonly _AuthService: AuthService) {
+    constructor(private readonly _PokemonHttpService: PokemonHttpService,
+                private readonly _AuthService: AuthService,
+                private readonly _modalController: ModalController) {
+
+        this.updateUI();
+    }
+
+    updateUI() {
         this.listarPokemones();
+        this.pokemonesSeleccionados = [];
         this.nombreCajero = this._AuthService.nombreUsuario;
         this.carritoCompras.nombreCajero = this.nombreCajero;
         this.carritoCompras.total = 0;
+    }
+
+    async finalizarCompra() {
+        const modalCrearPokemon = await this._modalController.create({
+            component: ModalFinalizarCompraPage,
+            componentProps: {
+                carritoCompras: this.carritoCompras
+            }
+        });
+        modalCrearPokemon.onDidDismiss().then((dato) => {
+                if (dato.data.mensaje !== 'cancelar') {
+                    this.updateUI();
+                }
+            }
+        );
+        return modalCrearPokemon.present();
     }
 
 
