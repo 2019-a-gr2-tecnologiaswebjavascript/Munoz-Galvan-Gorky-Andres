@@ -10,12 +10,12 @@
 
   <ion-item>
     <ion-label position="stacked">Cajero:</ion-label>
-    <ion-input disabled>{{nombreCajero}}</ion-input>
+    <ion-input disabled>{{carritoCompras.nombreCajero}}</ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label position="stacked">Total:</ion-label>
-    <ion-input disabled>100</ion-input>
+    <ion-label position="stacked">Total de la compra:</ion-label>
+    <ion-input disabled>${{carritoCompras.total}}</ion-input>
   </ion-item>
 
   <ion-list>
@@ -28,10 +28,39 @@
         <h3>Precio: {{pokemon.precioPokemon}}</h3>
         <h4>Nivel: {{pokemon.nivel}}</h4>
       </ion-label>
-      <ion-button color="success">
+      <ion-button color="success" (click)="aumentarCantidad(pokemon)">
         <ion-icon name="add"></ion-icon>
       </ion-button>
     </ion-item>
   </ion-list>
+
+  <div *ngIf="pokemonesSeleccionados.length>0">
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Pokemones seleccionados</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor="let pokemonSeleccionado of pokemonesSeleccionados">
+        <ion-label>
+          <h2>Nombre: {{pokemonSeleccionado.nombre}}</h2>
+          <h3>Cantidad: {{pokemonSeleccionado.cantidad}}</h3>
+          <h4>Total del producto: {{pokemonSeleccionado.total}}</h4>
+        </ion-label>
+        <ion-button color="danger" (click)="disminuiCantidad(pokemonSeleccionado)">
+          <ion-icon name="remove"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <ion-button color="success" [disabled]="carritoCompras.total==0">Finalizar compra</ion-button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
 
 </ion-content>

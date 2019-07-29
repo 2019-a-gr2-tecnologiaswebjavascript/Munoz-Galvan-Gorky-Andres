@@ -17,6 +17,8 @@ const routes: Routes = [
     loadChildren: './modal-crear-entrenador/modal-crear-entrenador.module#ModalCrearEntrenadorPageModule'
   },  { path: 'modal-crear-pokemon', loadChildren: './modal-crear-pokemon/modal-crear-pokemon.module#ModalCrearPokemonPageModule' },
   { path: 'modal-editar-pokemon', loadChildren: './modal-editar-pokemon/modal-editar-pokemon.module#ModalEditarPokemonPageModule' },
+  { path: 'modal-finalizar-compra', loadChildren: './modal-finalizar-compra/modal-finalizar-compra.module#ModalFinalizarCompraPageModule' },
+  { path: 'listar-facturas', loadChildren: './listar-facturas/listar-facturas.module#ListarFacturasPageModule' },
 
 ];
 @NgModule({
