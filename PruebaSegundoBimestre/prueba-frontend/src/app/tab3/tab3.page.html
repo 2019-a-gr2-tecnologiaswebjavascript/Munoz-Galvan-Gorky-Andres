@@ -1,9 +1,54 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Revisa las compras
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <form #formularioUsuario="ngForm"
+              (submit)="buscarFactura()">
+          <ion-item>
+            <ion-label position="floating">Buscar entrenador</ion-label>
+            <ion-input type="text"
+                       [(ngModel)]="parametroABuscar"
+                       name="entrenadorABuscar"
+            ></ion-input>
+          </ion-item>
+
+          <ion-button type="submit" color="success" class="center">Buscar facturas</ion-button>
+        </form>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+    <ion-list>
+      <ion-item *ngFor="let factura of listaFacturas">
+        <ion-row>
+          <ion-col>
+            <ion-label position="stacked">Nombre del comprador:</ion-label>
+            <ion-input disabled="true">{{factura.nombreComprador}}</ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-label position="stacked">CI:</ion-label>
+            <ion-input disabled="true">{{factura.cedulaComprador}}</ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-label position="stacked">Total de compra:</ion-label>
+        <ion-input disabled="true">{{factura.total}}</ion-input>
+        <ion-label position="stacked">Nombre del cajero:</ion-label>
+        <ion-input disabled="true">{{factura.nombreCajero}}</ion-input>
+
+
+      </ion-item>
+    </ion-list>
+
+</ion-content>
